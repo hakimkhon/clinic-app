@@ -12,5 +12,6 @@ class MyColors {
   static const containerTitleColor = Color.fromRGBO(36, 36, 36, 0.85);
   static const containerSubTitleColor = Color.fromRGBO(0, 0, 0, 0.4);
   static const containerBackgroundColor = Color.fromRGBO(0, 126, 133, 0.1);
+  static const appTitleColor = Color.fromRGBO(27, 27, 27, 0.74);
 
 }
