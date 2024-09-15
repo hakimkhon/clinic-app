@@ -2,8 +2,8 @@ import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
-import 'package:clinicapp/presentation/widgets/my_buttom.dart';
-import 'package:clinicapp/presentation/widgets/text_field.dart';
+import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
+import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {
@@ -11,6 +11,7 @@ class AuthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController smsCodeController = TextEditingController();
     return Scaffold(
       backgroundColor: MyColors.bgBodyColor,
       body: SafeArea(
@@ -39,7 +40,6 @@ class AuthPage extends StatelessWidget {
               width: ConstSizes.width(100, context),
               padding: EdgeInsets.all(ConstSizes.width(4, context)),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
@@ -50,37 +50,19 @@ class AuthPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Text(
-                    "SMS kod:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: MyColors.subTextColor,
-                      fontWeight: FontWeight.w400,
-                    ),
+                  CustomTextFieldWidget(
+                    hintText: "SMS kodni kiring",
+                    topText: "SMS kod",
+                    controller: smsCodeController,
+                    type: TextInputType.number,
                   ),
-                  const MyTextField(hintText: "SMS kodni kiriting"),
-                  TextButton(
-                    onPressed: () {},
-                    child: SizedBox(
-                      width: ConstSizes.width(100, context),
-                      child: const Text(
-                        "Nomerni o'zgartirish",
-                        textAlign: TextAlign.right,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: MyColors.subTextColor,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  )
                 ],
               ),
             ),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 25),
-              child: MyButtom(
+              child: CustomButtonWidget(
                 title: "Tasdiqlash",
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(

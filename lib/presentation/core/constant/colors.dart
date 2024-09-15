@@ -9,6 +9,7 @@ class MyColors {
   static const btnBackgroundDarkColor = Color.fromRGBO(14, 14, 14, 0.6);
   static const btnTextColor = Color.fromRGBO(255, 255, 255, 1);
   static const textButtonColor = Color.fromRGBO(0, 0, 0, 0.5);
+  static const hindTextColor = Color.fromRGBO(0, 0, 0, 0.6);
   static const containerTitleColor = Color.fromRGBO(36, 36, 36, 0.85);
   static const containerSubTitleColor = Color.fromRGBO(0, 0, 0, 0.4);
   static const containerBackgroundColor = Color.fromRGBO(0, 126, 133, 0.1);
