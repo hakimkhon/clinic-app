@@ -7,12 +7,12 @@ import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
-class AuthPage extends StatelessWidget {
-  const AuthPage({super.key});
+class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController smsCodeController = TextEditingController();
+  TextEditingController phoneNumberController = TextEditingController();
     return Scaffold(
       backgroundColor: MyColors.bgBodyColor,
       body: SafeArea(
@@ -23,22 +23,25 @@ class AuthPage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image(
-                      image: AssetImage(IconsAssets.clinic),
-                    ),
-                    SizedBox(width: 8),
-                    Text(
-                      "MZI Clinic",
-                      style: TextStyle(
-                        fontSize: 32,
-                        color: MyColors.appTitleColor,
-                        fontWeight: FontWeight.bold,
+                Padding(
+                  padding: EdgeInsets.only(top: ConstSizes.height(5, context)),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: AssetImage(IconsAssets.clinic),
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 8),
+                      Text(
+                        "MZI Clinic",
+                        style: TextStyle(
+                          fontSize: 32,
+                          color: MyColors.appTitleColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   width: ConstSizes.width(100, context),
@@ -47,7 +50,7 @@ class AuthPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Tasdiqlash",
+                        "Ro'yhatdan o'tish",
                         style: TextStyle(
                           fontSize: 26,
                           color: MyColors.textColor,
@@ -55,10 +58,9 @@ class AuthPage extends StatelessWidget {
                         ),
                       ),
                       CustomTextFieldWidget(
-                        hintText: "SMS kodni kiring",
-                        topText: "SMS kod",
-                        controller: smsCodeController,
-                        type: TextInputType.number,
+                        hintText: "Telefon raqam",
+                        controller: phoneNumberController,
+                        type: TextInputType.phone,
                       ),
                     ],
                   ),
@@ -67,11 +69,11 @@ class AuthPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15.0, vertical: 25),
                   child: CustomButtonWidget(
-                    title: "Tasdiqlash",
+                    title: "SMS yuborish",
                     onTap: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        ClinicRouteNames.profile,
+                        ClinicRouteNames.ratification,
                         (predicate) => false,
                       );
                     },

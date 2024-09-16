@@ -3,8 +3,8 @@ import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
-class EditLangPage extends StatelessWidget {
-  const EditLangPage({super.key});
+class VisitListPage extends StatelessWidget {
+  const VisitListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,38 +28,22 @@ class EditLangPage extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 280,
+                height: 200,
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Tilni o'zgartirish",
+                      "Tashriflar ro'yhati",
                       style: TextStyle(
                         fontSize: 24,
                         color: MyColors.textColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    CustomButtonWidget(
-                      title: "O'zbek",
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    CustomButtonWidget(
-                      title: "Ruscha",
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    CustomButtonWidget(
-                      title: "Inglizcha",
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
+                    CustomButtonWidget(title: "Ketdi", onTap: () {}),
+                    CustomButtonWidget(title: "Keldi", onTap: () {}),
                   ],
                 ),
               ),

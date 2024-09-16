@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       navigatorKey:  NavigationService.instance.navigatorKey,
       onGenerateRoute: ClinicRoute.generateRoute,
-      initialRoute: ClinicRouteNames.home,
+      initialRoute: ClinicRouteNames.registration,
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextFieldWidget extends StatelessWidget {
-  const CustomTextFieldWidget({
+class TextFieldWidget extends StatelessWidget {
+  const TextFieldWidget({
     super.key,
     required this.hintText,
     this.topText = "",
@@ -28,6 +28,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           ),
         ),
         TextField(
+          maxLines: 15,
           controller: controller,
           decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(

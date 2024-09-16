@@ -1,9 +1,11 @@
-import 'package:clinicapp/presentation/screens/auth/auth_page.dart';
+import 'package:clinicapp/presentation/screens/auth/ratification_page.dart';
+import 'package:clinicapp/presentation/screens/auth/registration_page.dart';
 import 'package:clinicapp/presentation/screens/home/diagnosis/diagnosis_page.dart';
 import 'package:clinicapp/presentation/screens/home/home_page.dart';
 import 'package:clinicapp/presentation/screens/home/news/news_page.dart';
 import 'package:clinicapp/presentation/screens/home/news_add/news_add_page.dart';
 import 'package:clinicapp/presentation/screens/home/select_date/select_data_page.dart';
+import 'package:clinicapp/presentation/screens/home/visit_list_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_lang/edit_lang_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_profile/edit_profile_page.dart';
 import 'package:clinicapp/presentation/screens/profile/profile_page.dart';
@@ -11,7 +13,6 @@ import 'package:clinicapp/presentation/screens/profile/settings/settings_page.da
 import 'package:flutter/material.dart';
 
 class ClinicRouteNames {
-  static const String auth = '/auth';
   static const String home = '/home';
   static const String profile = '/profile';
   static const String setting = '/setting';
@@ -21,6 +22,9 @@ class ClinicRouteNames {
   static const String editLang = '/editLang';
   static const String editProfile = '/editProfile';
   static const String selectDate = '/selectDate';
+  static const String registration = '/registration';
+  static const String ratification = '/ratification';
+  static const String visitList = '/visitList';
 }
 
 class ClinicRoute {
@@ -30,8 +34,10 @@ class ClinicRoute {
 
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case ClinicRouteNames.auth:
-        return MaterialPageRoute(builder: (context) => const AuthPage());
+      case ClinicRouteNames.ratification:
+        return MaterialPageRoute(builder: (context) => const RatificationPage());
+      case ClinicRouteNames.registration:
+        return MaterialPageRoute(builder: (context) => const RegistrationPage());
       case ClinicRouteNames.home:
         return MaterialPageRoute(builder: (context) => const HomePage());
       case ClinicRouteNames.profile:
@@ -40,6 +46,8 @@ class ClinicRoute {
         return MaterialPageRoute(builder: (context) => const SettingsPage());
       case ClinicRouteNames.diagnosis:
         return MaterialPageRoute(builder: (context) => const DiagnosisPage());
+      case ClinicRouteNames.visitList:
+        return MaterialPageRoute(builder: (context) => const VisitListPage());
       case ClinicRouteNames.news:
         return MaterialPageRoute(builder: (context) => const NewsPage());
       case ClinicRouteNames.newsAdd:

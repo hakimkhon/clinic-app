@@ -1,23 +1,78 @@
 import 'package:clinicapp/presentation/core/constant/colors.dart';
+import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/screens/home/widgets/text_field_widget.dart';
+import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
+import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
+import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
-class NewsAddPage extends StatelessWidget {
+class NewsAddPage extends StatefulWidget {
   const NewsAddPage({super.key});
 
   @override
+  State<NewsAddPage> createState() => _NewsAddPageState();
+}
+
+class _NewsAddPageState extends State<NewsAddPage> {
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Text(
-            'News Add Page',
-            style: TextStyle(
-              fontSize: 30,
-              color: MyColors.textColor,
-              fontWeight: FontWeight.w500,
-            ),
+    TextEditingController textEditingController = TextEditingController();
+    return Scaffold(
+      body: Stack(
+        children: [
+          const StakcedIcons(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: ConstSizes.height(4, context)),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.keyboard_arrow_left,
+                    size: 40,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: ConstSizes.width(100, context),
+                height: ConstSizes.height(88, context),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Text(
+                        "Yangilik qo'shish",
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: MyColors.textColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      CustomTextFieldWidget(
+                        hintText: "Sarlavha",
+                        controller: textEditingController,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10.0),
+                        child: CustomButtonWidget(title: "Rasm", onTap: () {}),
+                      ),
+                      TextFieldWidget(
+                          hintText: "Matn", controller: textEditingController),
+                      const Spacer(),
+                      CustomButtonWidget(title: "Qo'shish", onTap: () {})
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-        ),
+        ],
       ),
     );
   }

@@ -24,7 +24,7 @@ class CustomButtonWidget extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             width: ConstSizes.width(100, context),
-            height: ConstSizes.height(8, context),
+            height: ConstSizes.height(7, context),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), color: color),
             child: Text(
@@ -39,7 +39,7 @@ class CustomButtonWidget extends StatelessWidget {
           if (icon)
             const Positioned(
               right: 8,
-              top: 22,
+              top: 18,
               child: Icon(
                 Icons.chevron_right,
                 color: Colors.white,
