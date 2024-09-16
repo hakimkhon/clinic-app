@@ -3,7 +3,8 @@ const String lottiePath = "assets/lotties";
 const String iconPath = "assets/icons";
 
 class ImageAssets {
-  static const String test = "$imagePath/test.png";  
+  static const String topImage = "$imagePath/top_image.svg";  
+  static const String bottomImage = "$imagePath/bottom_image.svg";  
 }
 class LottieAssets {
   static const String test = "$lottiePath/lottie_currency.json";  
