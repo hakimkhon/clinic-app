@@ -6,8 +6,8 @@ import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class SelectClientPage extends StatelessWidget {
+  const SelectClientPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +23,38 @@ class ProfilePage extends StatelessWidget {
                   top: ConstSizes.height(4, context),
                   bottom: ConstSizes.height(2, context),
                 ),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_arrow_left,
-                    size: 40,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(
+                        Icons.keyboard_arrow_left,
+                        size: 40,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          ClinicRouteNames.diagnosis,
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.add,
+                        size: 40,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: SizedBox(
                   width: ConstSizes.width(100, context),
-                  height: ConstSizes.height(52, context),
+                  height: ConstSizes.height(45, context),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -62,36 +79,34 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       CustomButtonWidget(
-                        title: "Ma'lumotlarni o'zgartirish",
+                        title: "11 Sentabr",
                         onTap: () {
                           Navigator.pushNamed(
-                              context, ClinicRouteNames.editProfile);
-                        },
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "Tilni o'zgartirish",
-                        onTap: () {
-                          Navigator.pushNamed(
-                              context, ClinicRouteNames.editLang);
-                        },
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "Ommaviy offerta",
-                        onTap: () {},
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "Akkauntdan chiqish",
-                        onTap: () {
-                          Navigator.pushNamedAndRemoveUntil(
                             context,
-                            ClinicRouteNames.registration,
-                            (settings) => false,
+                            ClinicRouteNames.diagnosis,
                           );
                         },
-                        color: MyColors.hindTextColor,
+                        icon: true,
+                      ),
+                      CustomButtonWidget(
+                        title: "7 Avgust",
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            ClinicRouteNames.diagnosis,
+                          );
+                        },
+                        icon: true,
+                      ),
+                      CustomButtonWidget(
+                        title: "23 Avgust",
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            ClinicRouteNames.diagnosis,
+                          );
+                        },
+                        icon: true,
                       ),
                     ],
                   ),

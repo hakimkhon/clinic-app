@@ -2,9 +2,9 @@ import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
+import 'package:clinicapp/presentation/screens/auth/only_for_registration_stacked.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
-import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationPage extends StatelessWidget {
@@ -19,7 +19,7 @@ class RegistrationPage extends StatelessWidget {
         bottom: false,
         child: Stack(
           children: [
-            const StakcedIcons(),
+            const OnlyForRegistrationStacked(),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

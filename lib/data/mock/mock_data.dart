@@ -1,3 +1,4 @@
+import 'package:clinicapp/data/model/client_model.dart';
 import 'package:clinicapp/data/model/diagnosis_model.dart';
 import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/model/user_model.dart';
@@ -99,6 +100,49 @@ class MockData {
       imageUrl: Urls.humans5,
       phoneNumber: "955555555",
       smsCod: "5555",
+    ),
+  ];
+
+  static List<ClientModel> clients = [
+    ClientModel(
+      firstName: "Tojiyev",
+      lastName: "Timur",
+      timeInterval: "10:00-11:00",
+    ),
+    ClientModel(
+      firstName: "Umarov",
+      lastName: "Abror",
+      timeInterval: "13:00-14:00",
+    ),
+    ClientModel(
+      firstName: "Alijonov",
+      lastName: "G'ani",
+      timeInterval: "15:00-16:00",
+    ),
+    ClientModel(
+      firstName: "Safarov",
+      lastName: "Botir",
+      timeInterval: "15:00-16:00",
+    ),
+    ClientModel(
+      firstName: "Odilov",
+      lastName: "Nosir",
+      timeInterval: "15:00-16:00",
+    ),
+    ClientModel(
+      firstName: "Otabekova",
+      lastName: "Oydina",
+      timeInterval: "15:00-16:00",
+    ),
+    ClientModel(
+      firstName: "Xatamov",
+      lastName: "Jamol",
+      timeInterval: "15:00-16:00",
+    ),
+    ClientModel(
+      firstName: "Sobirova",
+      lastName: "Anora",
+      timeInterval: "15:00-16:00",
     ),
   ];
 }

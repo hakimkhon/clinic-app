@@ -3,8 +3,10 @@ const String lottiePath = "assets/lotties";
 const String iconPath = "assets/icons";
 
 class ImageAssets {
-  static const String topImage = "$imagePath/top_image.svg";  
-  static const String bottomImage = "$imagePath/bottom_image.svg";  
+  static const String topRightImage = "$imagePath/top_right_image.svg";  
+  static const String bottomLeftImage = "$imagePath/bottom_left_image.svg";  
+  static const String topLeftImage = "$imagePath/top_left_image.svg";  
+  static const String bottomRightImage = "$imagePath/bottom_right_image.svg";  
 }
 class LottieAssets {
   static const String test = "$lottiePath/lottie_currency.json";  

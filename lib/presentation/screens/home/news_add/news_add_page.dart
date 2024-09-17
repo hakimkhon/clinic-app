@@ -16,7 +16,8 @@ class NewsAddPage extends StatefulWidget {
 class _NewsAddPageState extends State<NewsAddPage> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController textEditingController = TextEditingController();
+    TextEditingController textTitle = TextEditingController();
+    TextEditingController subTitle = TextEditingController();
     return Scaffold(
       body: Stack(
         children: [
@@ -56,14 +57,14 @@ class _NewsAddPageState extends State<NewsAddPage> {
                       const SizedBox(height: 8),
                       CustomTextFieldWidget(
                         hintText: "Sarlavha",
-                        controller: textEditingController,
+                        controller: textTitle,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 10.0),
                         child: CustomButtonWidget(title: "Rasm", onTap: () {}),
                       ),
                       TextFieldWidget(
-                          hintText: "Matn", controller: textEditingController),
+                          hintText: "Matn", controller: subTitle),
                       const Spacer(),
                       CustomButtonWidget(title: "Qo'shish", onTap: () {})
                     ],

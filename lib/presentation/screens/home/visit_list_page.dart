@@ -29,7 +29,7 @@ class VisitListPage extends StatelessWidget {
               ),
               Container(
                 height: 200,
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,

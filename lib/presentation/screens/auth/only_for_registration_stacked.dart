@@ -3,8 +3,8 @@ import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class StakcedIcons extends StatelessWidget {
-  const StakcedIcons({super.key});
+class OnlyForRegistrationStacked extends StatelessWidget {
+  const OnlyForRegistrationStacked({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class StakcedIcons extends StatelessWidget {
       child: Stack(
         children: [
           Align(
-            alignment: Alignment.topRight,
-            child: SvgPicture.asset(ImageAssets.topRightImage),
+            alignment: Alignment.topLeft,
+            child: SvgPicture.asset(ImageAssets.topLeftImage),
           ),
           Align(
-            alignment: Alignment.bottomLeft,
-            child: SvgPicture.asset(ImageAssets.bottomLeftImage),
+            alignment: Alignment.bottomRight,
+            child: SvgPicture.asset(ImageAssets.bottomRightImage),
           ),
         ],
       ),
