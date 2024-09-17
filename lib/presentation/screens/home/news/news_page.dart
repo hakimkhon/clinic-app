@@ -45,8 +45,8 @@ class NewsPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: ConstSizes.width(100, context),
-                height: ConstSizes.height(88, context),
+                width: ConstSizes.width(100),
+                height: ConstSizes.height(88),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15.0),
                   child: Column(
@@ -54,7 +54,7 @@ class NewsPage extends StatelessWidget {
                     // mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       SizedBox(
-                        width: ConstSizes.width(60, context),
+                        width: ConstSizes.width(60),
                         child: const Text(
                           "Corona virusga davo topildi!",
                           style: TextStyle(

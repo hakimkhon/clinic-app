@@ -20,8 +20,8 @@ class ProfilePage extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  top: ConstSizes.height(4, context),
-                  bottom: ConstSizes.height(2, context),
+                  top: ConstSizes.height(4),
+                  bottom: ConstSizes.height(2),
                 ),
                 child: IconButton(
                   onPressed: () {
@@ -36,8 +36,8 @@ class ProfilePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: SizedBox(
-                  width: ConstSizes.width(100, context),
-                  height: ConstSizes.height(52, context),
+                  width: ConstSizes.width(100),
+                  height: ConstSizes.height(52),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -48,9 +48,9 @@ class ProfilePage extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(90),
                           image: DecorationImage(
-                            image: NetworkImage(Urls.humans1),
+                            image: NetworkImage(Urls.humans3),
                           ),
-                          // border: Border.all(color: MyColors.containerSubTitleColor)
+                          border: Border.all(color: MyColors.containerSubTitleColor)
                         ),
                       ),
                       const Text(

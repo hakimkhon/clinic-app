@@ -26,18 +26,18 @@ class ClientListWidget extends StatelessWidget {
             ),
           ),
           Container(
-            width: ConstSizes.width(100, context),
-            height: ConstSizes.height(22, context),
+            width: ConstSizes.width(100),
+            height: ConstSizes.height(22),
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),
               color: MyColors.containerBackgroundColor,
             ),
             child: ListView.builder(
-              itemCount: MockData.clients.length,
+              itemCount: MockData.users.length,
               // prototypeItem: const ListTile(),
               itemBuilder: (context, index) {
-                return ItemClientListView(clientModel: MockData.clients[index]);
+                return ItemClientListView(userModel: MockData.users[index]);
               },
             ),
           ),

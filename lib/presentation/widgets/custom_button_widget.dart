@@ -23,8 +23,8 @@ class CustomButtonWidget extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.center,
-            width: ConstSizes.width(100, context),
-            height: ConstSizes.height(7, context),
+            width: ConstSizes.width(100),
+            height: ConstSizes.height(7),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), color: color),
             child: Text(

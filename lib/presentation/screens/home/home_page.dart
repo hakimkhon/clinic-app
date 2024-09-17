@@ -42,15 +42,15 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(90),
                         image: DecorationImage(
-                          image: NetworkImage(Urls.humans1),
+                          image: NetworkImage(Urls.humans2),
                         ),
-                        // border: Border.all(color: MyColors.containerSubTitleColor)
+                        border: Border.all(color: MyColors.containerSubTitleColor)
                       ),
                     ),
                   ),
                   const SizedBox(width: 8),
                   SizedBox(
-                    width: ConstSizes.width(68, context),
+                    width: ConstSizes.width(68),
                     child: const Text(
                       'Kharamov Nuriddin',
                       maxLines: 2,
@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              width: ConstSizes.width(100, context),
-              height: ConstSizes.height(26, context),
+              width: ConstSizes.width(100),
+              height: ConstSizes.height(26),
               child: Stack(
                 children: [
                   const Padding(
@@ -91,24 +91,25 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  ZoomTapAnimation(
-                    onTap: () {
-                      Navigator.pushNamed(context, ClinicRouteNames.news);
-                    },
-                    child: Container(
-                      height: ConstSizes.height(27, context),
-                      padding: const EdgeInsets.only(top: 15),
-                      child: Swiper(
-                        pagination: const SwiperPagination(),
-                        // control: const SwiperControl(),
-                        autoplay: true,
-                        autoplayDelay: 10000,
-                        itemCount: 5,
-                        itemBuilder: (context, index) {
-                          return ItemNewsWidget(
-                              newsModel: MockData.news[index]);
-                        },
-                      ),
+                  Container(
+                    height: ConstSizes.height(27),
+                    width: ConstSizes.width(100),
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Swiper(
+                      pagination: const SwiperPagination(),
+                      // control: const SwiperControl(),
+                      autoplay: true,
+                      autoplayDelay: 10000,
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        return ZoomTapAnimation(
+                          onTap: () {
+                            Navigator.pushNamed(context, ClinicRouteNames.news);
+                          },
+                          child:
+                              ItemNewsWidget(newsModel: MockData.news[index]),
+                        );
+                      },
                     ),
                   ),
                 ],

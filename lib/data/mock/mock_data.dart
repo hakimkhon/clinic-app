@@ -72,6 +72,7 @@ class MockData {
       imageUrl: Urls.humans3,
       phoneNumber: "911111111",
       smsCod: "1111",
+      date: "10:00-11:00"
     ),
     UserModel(
       name: "Alimardon",
@@ -79,6 +80,7 @@ class MockData {
       imageUrl: Urls.humans2,
       phoneNumber: "922222222",
       smsCod: "2222",
+      date: "10:00-12:00"
     ),
     UserModel(
       name: "Jasurbek",
@@ -86,6 +88,7 @@ class MockData {
       imageUrl: Urls.humans3,
       phoneNumber: "933333333",
       smsCod: "3333",
+      date: "09:00-11:00"
     ),
     UserModel(
       name: "Otabek",
@@ -93,6 +96,7 @@ class MockData {
       imageUrl: Urls.humans4,
       phoneNumber: "944444444",
       smsCod: "4444",
+      date: "12:00-13:00"
     ),
     UserModel(
       name: "Nosirxon",
@@ -100,6 +104,7 @@ class MockData {
       imageUrl: Urls.humans5,
       phoneNumber: "955555555",
       smsCod: "5555",
+      date: "10:00-11:00"
     ),
   ];
 

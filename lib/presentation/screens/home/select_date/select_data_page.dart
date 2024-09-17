@@ -17,8 +17,8 @@ class SelectDataPage extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  top: ConstSizes.height(4, context),
-                  bottom: ConstSizes.height(2, context),
+                  top: ConstSizes.height(4),
+                  bottom: ConstSizes.height(2),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

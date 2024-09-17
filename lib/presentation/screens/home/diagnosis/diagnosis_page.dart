@@ -30,7 +30,7 @@ class DiagnosisPage extends StatelessWidget {
                 ),
               ),
               Container(
-                height: ConstSizes.height(86, context),
+                height: ConstSizes.height(86),
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,9 +45,10 @@ class DiagnosisPage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: ConstSizes.width(100, context),
-                      height: ConstSizes.height(75, context),
+                      width: ConstSizes.width(100),
+                      height: ConstSizes.height(75),
                       child: ListView(
+                        padding: EdgeInsets.zero,
                       shrinkWrap: true,
                         children: [
                           Text(

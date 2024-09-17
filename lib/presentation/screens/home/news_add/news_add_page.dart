@@ -26,7 +26,7 @@ class _NewsAddPageState extends State<NewsAddPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(top: ConstSizes.height(4, context)),
+                padding: EdgeInsets.only(top: ConstSizes.height(4)),
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -38,8 +38,8 @@ class _NewsAddPageState extends State<NewsAddPage> {
                 ),
               ),
               SizedBox(
-                width: ConstSizes.width(100, context),
-                height: ConstSizes.height(88, context),
+                width: ConstSizes.width(100),
+                height: ConstSizes.height(88),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15.0),
                   child: Column(

@@ -30,8 +30,8 @@ class CalendarWidget extends StatelessWidget {
               Navigator.pushNamed(context, ClinicRouteNames.selectDate);
             },
             child: Container(
-              width: ConstSizes.width(100, context),
-              height: ConstSizes.height(30, context),
+              width: ConstSizes.width(100),
+              height: ConstSizes.height(30),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(14),
                   color: MyColors.containerBackgroundColor),

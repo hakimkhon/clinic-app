@@ -24,7 +24,7 @@ class RegistrationPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: ConstSizes.height(5, context)),
+                  padding: EdgeInsets.only(top: ConstSizes.height(5)),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -44,8 +44,8 @@ class RegistrationPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: ConstSizes.width(100, context),
-                  padding: EdgeInsets.all(ConstSizes.width(4, context)),
+                  width: ConstSizes.width(100),
+                  padding: EdgeInsets.all(ConstSizes.width(4)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -71,10 +71,9 @@ class RegistrationPage extends StatelessWidget {
                   child: CustomButtonWidget(
                     title: "SMS yuborish",
                     onTap: () {
-                      Navigator.pushNamedAndRemoveUntil(
+                      Navigator.pushNamed(
                         context,
                         ClinicRouteNames.ratification,
-                        (predicate) => false,
                       );
                     },
                   ),

@@ -1,4 +1,4 @@
-import 'package:clinicapp/data/model/client_model.dart';
+import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:flutter/material.dart';
@@ -7,15 +7,19 @@ import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 class ItemClientListView extends StatelessWidget {
   const ItemClientListView({
     super.key,
-    required this.clientModel,
+    required this.userModel,
   });
-  final ClientModel clientModel;
+  final UserModel userModel;
 
   @override
   Widget build(BuildContext context) {
     return ZoomTapAnimation(
       onTap: () {
-        Navigator.pushNamed(context, ClinicRouteNames.selectClient);
+        Navigator.pushNamed(
+          context,
+          ClinicRouteNames.selectClient,
+          arguments: userModel,
+        );
       },
       child: Column(
         children: [
@@ -23,7 +27,7 @@ class ItemClientListView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                clientModel.firstName,
+                userModel.name,
                 style: const TextStyle(
                   fontSize: 16,
                   color: MyColors.subTextColor,
@@ -32,7 +36,7 @@ class ItemClientListView extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                clientModel.lastName,
+                userModel.surname,
                 style: const TextStyle(
                   fontSize: 16,
                   color: MyColors.subTextColor,
@@ -41,7 +45,7 @@ class ItemClientListView extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                clientModel.timeInterval,
+                userModel.date,
                 style: const TextStyle(
                   fontSize: 16,
                   color: MyColors.subTextColor,

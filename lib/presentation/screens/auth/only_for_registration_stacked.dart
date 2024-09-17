@@ -9,8 +9,8 @@ class OnlyForRegistrationStacked extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: ConstSizes.width(100, context),
-      height: ConstSizes.height(100, context),
+      width: ConstSizes.width(100),
+      height: ConstSizes.height(100),
       child: Stack(
         children: [
           Align(

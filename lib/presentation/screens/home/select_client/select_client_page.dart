@@ -1,13 +1,17 @@
+import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
-import 'package:clinicapp/presentation/core/constant/urls.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
 class SelectClientPage extends StatelessWidget {
-  const SelectClientPage({super.key});
+  const SelectClientPage({
+    super.key,
+    required this.userModel,
+  });
+  final UserModel userModel;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +24,8 @@ class SelectClientPage extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  top: ConstSizes.height(4, context),
-                  bottom: ConstSizes.height(2, context),
+                  top: ConstSizes.height(4),
+                  bottom: ConstSizes.height(2),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,8 +57,8 @@ class SelectClientPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: SizedBox(
-                  width: ConstSizes.width(100, context),
-                  height: ConstSizes.height(45, context),
+                  width: ConstSizes.width(100),
+                  height: ConstSizes.height(45),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -65,14 +69,14 @@ class SelectClientPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(90),
                           image: DecorationImage(
-                            image: NetworkImage(Urls.humans1),
+                            image: NetworkImage(userModel.imageUrl),
                           ),
-                          // border: Border.all(color: MyColors.containerSubTitleColor)
+                          border: Border.all(color: MyColors.containerSubTitleColor)
                         ),
                       ),
-                      const Text(
-                        "Khatamov Nuriddin",
-                        style: TextStyle(
+                      Text(
+                        "${userModel.name} ${userModel.surname}",
+                        style: const TextStyle(
                           fontSize: 24,
                           color: MyColors.textColor,
                           fontWeight: FontWeight.bold,

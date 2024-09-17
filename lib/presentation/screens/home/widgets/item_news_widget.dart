@@ -30,7 +30,7 @@ class ItemNewsWidget extends StatelessWidget {
           },
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 5),
-            height: ConstSizes.height(24, context),
+            height: ConstSizes.height(24),
             margin: const EdgeInsets.only(left: 15, right: 15, top: 22),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),

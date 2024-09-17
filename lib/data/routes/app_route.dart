@@ -1,3 +1,4 @@
+import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/presentation/screens/auth/ratification_page.dart';
 import 'package:clinicapp/presentation/screens/auth/registration_page.dart';
 import 'package:clinicapp/presentation/screens/home/diagnosis/diagnosis_page.dart';
@@ -51,7 +52,7 @@ class ClinicRoute {
       case ClinicRouteNames.visitList:
         return MaterialPageRoute(builder: (context) => const VisitListPage());
       case ClinicRouteNames.selectClient:
-        return MaterialPageRoute(builder: (context) => const SelectClientPage());
+        return MaterialPageRoute(builder: (context) => SelectClientPage(userModel: settings.arguments as UserModel));
       case ClinicRouteNames.selectDate:
         return MaterialPageRoute(builder: (context) => const SelectDataPage());
       case ClinicRouteNames.news:
