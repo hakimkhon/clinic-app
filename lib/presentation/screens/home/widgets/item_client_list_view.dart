@@ -1,6 +1,7 @@
 import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -29,7 +30,7 @@ class ItemClientListView extends StatelessWidget {
               Text(
                 userModel.name,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: MyColors.subTextColor,
                   fontWeight: FontWeight.w400,
                 ),
@@ -38,7 +39,7 @@ class ItemClientListView extends StatelessWidget {
               Text(
                 userModel.surname,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: MyColors.subTextColor,
                   fontWeight: FontWeight.w400,
                 ),

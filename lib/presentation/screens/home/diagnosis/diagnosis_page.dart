@@ -17,8 +17,11 @@ class DiagnosisPage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // arrow left buttom
               Padding(
-                padding: const EdgeInsets.only(top: 40.0),
+                padding: EdgeInsets.only(
+                  top: ConstSizes.height(6),
+                ),
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -29,55 +32,53 @@ class DiagnosisPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: ConstSizes.height(86),
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "1 Yanvarda qo'yilgan tashxis",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: MyColors.textColor,
-                        fontWeight: FontWeight.bold,
-                      ),
+              Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "1 Yanvarda qo'yilgan tashxis",
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: MyColors.textColor,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      width: ConstSizes.width(100),
-                      height: ConstSizes.height(75),
-                      child: ListView(
-                        padding: EdgeInsets.zero,
+                  ),
+                  SizedBox(
+                    width: ConstSizes.width(100),
+                    height: ConstSizes.height(75),
+                    child: ListView(
+                      padding: EdgeInsets.zero,
                       shrinkWrap: true,
-                        children: [
-                          Text(
-                            MockData.diagnosis[0].fullFormDiagnos,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              color: MyColors.subTextColor,
-                              fontWeight: FontWeight.w400,
-                            ),
+                      children: [
+                        Text(
+                          MockData.diagnosis[0].fullFormDiagnos,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: MyColors.subTextColor,
+                            fontWeight: FontWeight.w400,
                           ),
-                          Image(image: NetworkImage(MockData.diagnosis[0].imgUrl),),
-                          Text(
-                            MockData.diagnosis[2].fullFormDiagnos,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              color: MyColors.subTextColor,
-                              fontWeight: FontWeight.w400,
-                            ),
+                        ),
+                        Image(
+                          image: NetworkImage(MockData.diagnosis[0].imgUrl),
+                        ),
+                        Text(
+                          MockData.diagnosis[2].fullFormDiagnos,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: MyColors.subTextColor,
+                            fontWeight: FontWeight.w400,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    CustomButtonWidget(
-                        title: "Saqlash",
-                        onTap: () {
-                          Navigator.pop(context);
-                        })
-                  ],
-                ),
+                  ),
+                  CustomButtonWidget(
+                      title: "Saqlash",
+                      onTap: () {
+                        Navigator.pop(context);
+                      })
+                ],
               ),
             ],
           ),

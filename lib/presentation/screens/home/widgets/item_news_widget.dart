@@ -24,23 +24,23 @@ class ItemNewsWidget extends StatelessWidget {
             width: 70,
           ),
         ),
-        ZoomTapAnimation(
-          onTap: () {
-            Navigator.pushNamed(context, ClinicRouteNames.news);
-          },
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 5),
-            height: ConstSizes.height(24),
-            margin: const EdgeInsets.only(left: 15, right: 15, top: 22),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              color: MyColors.containerBackgroundColor,
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 5),
+          height: ConstSizes.height(24),
+          margin: const EdgeInsets.only(left: 15, right: 15, top: 22),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(14),
+            color: MyColors.containerBackgroundColor,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 15,
             ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 15,
-                vertical: 15,
-              ),
+            child: ZoomTapAnimation(
+              onTap: () {
+                Navigator.pushNamed(context, ClinicRouteNames.news, arguments: newsModel);
+              },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -65,7 +65,7 @@ class ItemNewsWidget extends StatelessWidget {
                   ),
                   ZoomTapAnimation(
                     onTap: () {
-                      Navigator.pushNamed(context, ClinicRouteNames.news);
+                      Navigator.pushNamed(context, ClinicRouteNames.news, arguments: newsModel);
                     },
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.end,

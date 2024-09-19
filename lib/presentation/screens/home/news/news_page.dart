@@ -1,13 +1,18 @@
+import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
-import 'package:clinicapp/presentation/core/constant/urls.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
 class NewsPage extends StatelessWidget {
-  const NewsPage({super.key});
+  const NewsPage({
+    super.key,
+    required this.newsModel,
+  });
+  final NewsModel newsModel;
 
   @override
   Widget build(BuildContext context) {
@@ -55,12 +60,13 @@ class NewsPage extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: ConstSizes.width(60),
-                        child: const Text(
-                          "Corona virusga davo topildi!",
-                          style: TextStyle(
+                        child: Text(
+                          newsModel.title,
+                          style: const TextStyle(
                             fontSize: 24,
                             color: MyColors.textColor,
                             fontWeight: FontWeight.bold,
+                            fontFamily: AppFonts.lexendTera,
                           ),
                         ),
                       ),
@@ -68,16 +74,18 @@ class NewsPage extends StatelessWidget {
                         child: Image(
                           width: 140,
                           image: NetworkImage(
-                            Urls.iconNews1,
+                            newsModel.iconUrl,
                           ),
                         ),
                       ),
-                      const Text(
-                        "Amerikalik olimlar Corona, yani Covid-19 uchun vaksina o’ylab topishti, O’zbekiston davlat sog’liqni saqlash vazirligi O’zbekiston aholisiga ham shu vaksinani qabul qilishlarini aytishmoqda.Amerikalik olimlar Corona, yani Covid-19 uchun vaksina o’ylab topishti, O’zbekiston davlat sog’liqni saqlash vazirligi O’zbekiston aholisiga ham shu vaksinani qabul qilishlarini aytishmoqda.",
-                        style: TextStyle(
+                      Text(
+                        newsModel.description,
+                        style: const TextStyle(
                           fontSize: 16,
                           color: MyColors.subTextColor,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w400,
+                            fontFamily: AppFonts.lato,
+
                         ),
                       ),
                       const Spacer(),

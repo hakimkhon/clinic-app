@@ -1,4 +1,5 @@
 import 'package:clinicapp/data/routes/app_route.dart';
+import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
@@ -7,9 +8,18 @@ import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
-class RatificationPage extends StatelessWidget {
-  const RatificationPage({super.key});
+class RatificationPage extends StatefulWidget {
+  const RatificationPage({
+    super.key,
+    required this.phoneNumber,
+  });
+  final String phoneNumber;
 
+  @override
+  State<RatificationPage> createState() => _RatificationPageState();
+}
+
+class _RatificationPageState extends State<RatificationPage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController smsCodeController = TextEditingController();
@@ -23,8 +33,8 @@ class RatificationPage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: EdgeInsets.only(top: ConstSizes.height(5)),
+                SizedBox(
+                  height: ConstSizes.height(10),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -44,9 +54,11 @@ class RatificationPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: ConstSizes.width(100),
-                  padding: EdgeInsets.all(ConstSizes.width(4)),
+                  height: ConstSizes.height(14),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: ConstSizes.width(4)),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
@@ -66,19 +78,21 @@ class RatificationPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 15.0, vertical: 25),
-                  child: CustomButtonWidget(
-                    title: "Tasdiqlash",
-                    onTap: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                        context,
-                        ClinicRouteNames.home,
-                        (predicate) => false,
-                      );
-                    },
-                  ),
+                CustomButtonWidget(
+                  title: "Tasdiqlash",
+                  bottomPadding: 25,
+                  size: 18,
+                  onTap: () {
+                    MockService.checkSMSCode(
+                      phoneNumber: widget.phoneNumber,
+                      smsCode: smsCodeController.text,
+                    );
+                    // Navigator.pushNamed(
+                    //   context,
+                    //   ClinicRouteNames.home,
+                    //   arguments: smsCodeController.text
+                    // );
+                  },
                 ),
               ],
             ),

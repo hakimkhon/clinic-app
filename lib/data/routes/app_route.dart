@@ -1,3 +1,4 @@
+import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/presentation/screens/auth/ratification_page.dart';
 import 'package:clinicapp/presentation/screens/auth/registration_page.dart';
@@ -38,9 +39,14 @@ class ClinicRoute {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case ClinicRouteNames.ratification:
-        return MaterialPageRoute(builder: (context) => const RatificationPage());
+        return MaterialPageRoute(
+            builder: (context) => RatificationPage(
+                  phoneNumber: settings.arguments as String,
+                ));
       case ClinicRouteNames.registration:
-        return MaterialPageRoute(builder: (context) => const RegistrationPage());
+        return MaterialPageRoute(
+          builder: (context) => const RegistrationPage(),
+        );
       case ClinicRouteNames.home:
         return MaterialPageRoute(builder: (context) => const HomePage());
       case ClinicRouteNames.profile:
@@ -52,11 +58,15 @@ class ClinicRoute {
       case ClinicRouteNames.visitList:
         return MaterialPageRoute(builder: (context) => const VisitListPage());
       case ClinicRouteNames.selectClient:
-        return MaterialPageRoute(builder: (context) => SelectClientPage(userModel: settings.arguments as UserModel));
+        return MaterialPageRoute(
+            builder: (context) =>
+                SelectClientPage(userModel: settings.arguments as UserModel));
       case ClinicRouteNames.selectDate:
         return MaterialPageRoute(builder: (context) => const SelectDataPage());
       case ClinicRouteNames.news:
-        return MaterialPageRoute(builder: (context) => const NewsPage());
+        return MaterialPageRoute(
+            builder: (context) =>
+                NewsPage(newsModel: settings.arguments as NewsModel));
       case ClinicRouteNames.newsAdd:
         return MaterialPageRoute(builder: (context) => const NewsAddPage());
       case ClinicRouteNames.editLang:

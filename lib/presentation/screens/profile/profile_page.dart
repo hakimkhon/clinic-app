@@ -33,69 +33,65 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: SizedBox(
-                  width: ConstSizes.width(100),
-                  height: ConstSizes.height(52),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 110,
-                        height: 110,
-                        margin: const EdgeInsets.only(bottom: 12),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(90),
-                          image: DecorationImage(
-                            image: NetworkImage(Urls.humans3),
-                          ),
-                          border: Border.all(color: MyColors.containerSubTitleColor)
-                        ),
-                      ),
-                      const Text(
-                        "Khatamov Nuriddin",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: MyColors.textColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      CustomButtonWidget(
-                        title: "Ma'lumotlarni o'zgartirish",
-                        onTap: () {
-                          Navigator.pushNamed(
-                              context, ClinicRouteNames.editProfile);
-                        },
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "Tilni o'zgartirish",
-                        onTap: () {
-                          Navigator.pushNamed(
-                              context, ClinicRouteNames.editLang);
-                        },
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "Ommaviy offerta",
-                        onTap: () {},
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "Akkauntdan chiqish",
-                        onTap: () {
-                          Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            ClinicRouteNames.registration,
-                            (settings) => false,
-                          );
-                        },
-                        color: MyColors.hindTextColor,
-                      ),
-                    ],
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 65,
+                    backgroundImage: NetworkImage(Urls.humans2),
+                    
                   ),
-                ),
+                  // Container(
+                  //   width: 110,
+                  //   height: 110,
+                  //   // margin: const EdgeInsets.only(bottom: 12),
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(90),
+                  //     image: DecorationImage(
+                  //       image: NetworkImage(Urls.humans3),
+                  //     ),
+                  //     border: Border.all(color: MyColors.containerSubTitleColor)
+                  //   ),
+                  // ),
+                  const Text(
+                    "Khatamov Nuriddin",
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: MyColors.textColor,
+                        fontWeight: FontWeight.bold,
+                        height: 3),
+                  ),
+                  CustomButtonWidget(
+                    title: "Ma'lumotlarni o'zgartirish",
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, ClinicRouteNames.editProfile);
+                    },
+                    icon: true,
+                  ),
+                  CustomButtonWidget(
+                    title: "Tilni o'zgartirish",
+                    onTap: () {
+                      Navigator.pushNamed(context, ClinicRouteNames.editLang);
+                    },
+                    icon: true,
+                  ),
+                  CustomButtonWidget(
+                    title: "Ommaviy offerta",
+                    onTap: () {},
+                    icon: true,
+                  ),
+                  CustomButtonWidget(
+                    title: "Akkauntdan chiqish",
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        ClinicRouteNames.registration,
+                        (settings) => false,
+                      );
+                    },
+                    color: MyColors.hindTextColor,
+                  ),
+                ],
               ),
             ],
           ),
