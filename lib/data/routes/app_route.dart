@@ -7,6 +7,7 @@ import 'package:clinicapp/presentation/screens/home/home_page.dart';
 import 'package:clinicapp/presentation/screens/home/news/news_page.dart';
 import 'package:clinicapp/presentation/screens/home/news_add/news_add_page.dart';
 import 'package:clinicapp/presentation/screens/home/select_client/select_client_page.dart';
+import 'package:clinicapp/presentation/screens/home/select_date/detail_page.dart';
 import 'package:clinicapp/presentation/screens/home/select_date/select_data_page.dart';
 import 'package:clinicapp/presentation/screens/home/visit_list_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_lang/edit_lang_page.dart';
@@ -29,6 +30,7 @@ class ClinicRouteNames {
   static const String registration = '/registration';
   static const String ratification = '/ratification';
   static const String visitList = '/visitList';
+  static const String detail = '/detail';
 }
 
 class ClinicRoute {
@@ -73,6 +75,8 @@ class ClinicRoute {
         return MaterialPageRoute(builder: (context) => const EditLangPage());
       case ClinicRouteNames.editProfile:
         return MaterialPageRoute(builder: (context) => const EditProfilePage());
+      case ClinicRouteNames.detail:
+        return MaterialPageRoute(builder: (context) => const DetailPage());
       default:
         return MaterialPageRoute(builder: (context) => const HomePage());
     }

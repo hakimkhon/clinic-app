@@ -1,7 +1,6 @@
 import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
-import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 

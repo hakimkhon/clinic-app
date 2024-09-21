@@ -16,8 +16,9 @@ class MyText {
         fontSize: size,
         color: color,
         fontWeight: fontWeight,
-        fontFamily: fontFamily,
+        fontFamily: fontFamily,        
       ),
+      maxLines: 3,
     );
   }
 }

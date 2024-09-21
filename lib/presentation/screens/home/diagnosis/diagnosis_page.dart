@@ -36,17 +36,21 @@ class DiagnosisPage extends StatelessWidget {
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "1 Yanvarda qo'yilgan tashxis",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: MyColors.textColor,
-                      fontWeight: FontWeight.bold,
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0),
+                    child: Text(
+                      "1 Yanvarda qo'yilgan tashxis",
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: MyColors.textColor,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                  SizedBox(
+                  Container(
                     width: ConstSizes.width(100),
                     height: ConstSizes.height(75),
+                    padding: EdgeInsets.symmetric(horizontal: 15),
                     child: ListView(
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,

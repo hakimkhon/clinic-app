@@ -1,4 +1,3 @@
-import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';

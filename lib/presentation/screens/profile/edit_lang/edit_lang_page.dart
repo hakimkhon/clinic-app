@@ -29,7 +29,7 @@ class EditLangPage extends StatelessWidget {
               ),
               Container(
                 height: 280,
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                // padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
