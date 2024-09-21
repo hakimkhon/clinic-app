@@ -1,4 +1,5 @@
 import 'package:clinicapp/presentation/core/constant/colors.dart';
+import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
@@ -27,14 +28,13 @@ class EditLangPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: 280,
-                // padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: ConstSizes.width(5),bottom: ConstSizes.height(2)),
+                    child: const Text(
                       "Tilni o'zgartirish",
                       style: TextStyle(
                         fontSize: 24,
@@ -42,26 +42,29 @@ class EditLangPage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    CustomButtonWidget(
-                      title: "O'zbek",
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    CustomButtonWidget(
-                      title: "Ruscha",
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    CustomButtonWidget(
-                      title: "Inglizcha",
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                  ],
-                ),
+                  ),
+                  CustomButtonWidget(
+                    size: 18,
+                    title: "O'zbek",
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  CustomButtonWidget(
+                    size: 18,
+                    title: "Ruscha",
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  CustomButtonWidget(
+                    size: 18,
+                    title: "Inglizcha",
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
               ),
             ],
           ),

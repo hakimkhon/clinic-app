@@ -40,11 +40,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     image: AssetImage(IconsAssets.logoApp),
                   ),
                 ),
-                Container(
-                  height: ConstSizes.height(14),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: ConstSizes.width(4),
-                  ),
+                SizedBox(
+                  height: ConstSizes.height(16),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +50,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         data: "Ro'yhatdan o'tish",
                         size: 26,
                         fontWeight: FontWeight.w800,
-                        color: MyColors.textColor,
+                        left: ConstSizes.width(4),
                       ),
                       CustomTextFieldWidget(
                         hintText: "Telefon raqam",

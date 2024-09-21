@@ -50,7 +50,7 @@ class DiagnosisPage extends StatelessWidget {
                   Container(
                     width: ConstSizes.width(100),
                     height: ConstSizes.height(75),
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: ListView(
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,

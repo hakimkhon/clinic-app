@@ -4,6 +4,7 @@ import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
+import 'package:clinicapp/presentation/widgets/my_text_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -52,21 +53,17 @@ class _RatificationPageState extends State<RatificationPage> {
                     ],
                   ),
                 ),
-                Container(
-                  height: ConstSizes.height(14),
-                  padding:
-                      EdgeInsets.symmetric(horizontal: ConstSizes.width(4)),
+                SizedBox(
+                  height: ConstSizes.height(15),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "Tasdiqlash",
-                        style: TextStyle(
-                          fontSize: 26,
-                          color: MyColors.textColor,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      MyText.text(
+                        data: "Tasdiqlash",
+                        size: 26,
+                        fontWeight: FontWeight.w800,
+                        left: ConstSizes.width(4),
                       ),
                       CustomTextFieldWidget(
                         hintText: "SMS kodni kiring",

@@ -1,4 +1,5 @@
 import 'package:clinicapp/presentation/core/constant/colors.dart';
+import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFieldWidget extends StatelessWidget {
@@ -16,20 +17,30 @@ class CustomTextFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          topText == "" ? "$hintText:" : "$topText:",
-          style: const TextStyle(
-            fontSize: 14,
-            color: MyColors.subTextColor,
-            fontWeight: FontWeight.w400,
+    return Padding(
+      padding: EdgeInsets.only(
+        left: ConstSizes.width(4),
+        right: ConstSizes.width(4),
+        bottom: ConstSizes.height(1),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 4, bottom: 1),
+            child: Text(
+              topText == "" ? "$hintText:" : "$topText:",
+              style: const TextStyle(
+                fontSize: 15,
+                color: MyColors.subTextColor,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
           ),
-        ),
-        TextField(
-          controller: controller,
-          decoration: InputDecoration(
+          TextField(
+            controller: controller,
+            keyboardType: type,
+            decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: const BorderSide(
@@ -38,19 +49,18 @@ class CustomTextFieldWidget extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: const BorderSide(
-                    // color: MyColors.borderTextFieldColor,
-                    ),
+                borderSide: const BorderSide(),
               ),
               hintText: hintText,
               hintStyle: const TextStyle(
-                fontSize: 16,
+                fontSize: 17,
                 color: MyColors.hindTextColor,
                 fontWeight: FontWeight.w400,
-              )),
-          keyboardType: type,
-        ),
-      ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
