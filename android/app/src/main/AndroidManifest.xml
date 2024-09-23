@@ -3,10 +3,9 @@
         android:label="clinicapp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-        <activity
-           
+        android:enableOnBackInvokedCallback="true"
+        <activity          
             android:name=".MainActivity"
-            android:enableOnBackInvokedCallback="true"
             android:exported="true"
             android:launchMode="singleTop"
             android:taskAffinity=""

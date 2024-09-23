@@ -1,13 +1,15 @@
+import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
-import 'package:clinicapp/presentation/core/constant/urls.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+  const ProfilePage({super.key, required this.userModel});
+  final UserModel userModel;
 
   @override
   Widget build(BuildContext context) {
@@ -37,24 +39,11 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 65,
-                    backgroundImage: NetworkImage(Urls.humans2),
-                    
+                    backgroundImage: NetworkImage(userModel.imageUrl),
                   ),
-                  // Container(
-                  //   width: 110,
-                  //   height: 110,
-                  //   // margin: const EdgeInsets.only(bottom: 12),
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.circular(90),
-                  //     image: DecorationImage(
-                  //       image: NetworkImage(Urls.humans3),
-                  //     ),
-                  //     border: Border.all(color: MyColors.containerSubTitleColor)
-                  //   ),
-                  // ),
-                  const Text(
-                    "Khatamov Nuriddin",
-                    style: TextStyle(
+                  Text(
+                    "${userModel.name} ${userModel.surname}",
+                    style: const TextStyle(
                         fontSize: 24,
                         color: MyColors.textColor,
                         fontWeight: FontWeight.bold,
@@ -83,6 +72,7 @@ class ProfilePage extends StatelessWidget {
                   CustomButtonWidget(
                     title: "Akkauntdan chiqish",
                     onTap: () {
+                      exit;
                       Navigator.pushNamedAndRemoveUntil(
                         context,
                         ClinicRouteNames.registration,
@@ -98,5 +88,10 @@ class ProfilePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  get exit async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('phone');
   }
 }

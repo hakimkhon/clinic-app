@@ -1,9 +1,9 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:clinicapp/data/mock/mock_data.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
+import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
-import 'package:clinicapp/presentation/core/constant/urls.dart';
 import 'package:clinicapp/presentation/screens/home/widgets/calendar_widget.dart';
 import 'package:clinicapp/presentation/screens/home/widgets/client_list_widget.dart';
 import 'package:clinicapp/presentation/screens/home/widgets/item_news_widget.dart';
@@ -11,7 +11,9 @@ import 'package:flutter/material.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({    
+    super.key,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -36,19 +38,23 @@ class _HomePageState extends State<HomePage> {
                     ZoomTapAnimation(
                         onTap: () {
                           Navigator.pushNamed(
-                              context, ClinicRouteNames.profile);
+                            context,
+                            ClinicRouteNames.profile,
+                            arguments: MockService.userModel
+                          );
                         },
                         child: CircleAvatar(
                           radius: 28,
-                          backgroundImage: NetworkImage(Urls.humans2),
+                          backgroundImage:
+                              NetworkImage(MockService.userModel.imageUrl),
                         )),
                     const SizedBox(width: 10),
                     SizedBox(
                       width: ConstSizes.width(66),
-                      child: const Text(
-                        'Kharamov Nuriddin',
+                      child: Text(
+                        "${MockService.userModel.name} ${MockService.userModel.surname}",
                         maxLines: 2,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           color: MyColors.textColor,
                           fontWeight: FontWeight.w500,

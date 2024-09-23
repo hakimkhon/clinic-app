@@ -14,12 +14,14 @@ import 'package:clinicapp/presentation/screens/profile/edit_lang/edit_lang_page.
 import 'package:clinicapp/presentation/screens/profile/edit_profile/edit_profile_page.dart';
 import 'package:clinicapp/presentation/screens/profile/profile_page.dart';
 import 'package:clinicapp/presentation/screens/profile/settings/settings_page.dart';
+import 'package:clinicapp/presentation/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
 class ClinicRouteNames {
   static const String home = '/home';
   static const String profile = '/profile';
   static const String setting = '/setting';
+  static const String splash = '/splash';
   static const String diagnosis = '/diagnosis';
   static const String news = '/news';
   static const String newsAdd = '/newsAdd';
@@ -51,8 +53,10 @@ class ClinicRoute {
         );
       case ClinicRouteNames.home:
         return MaterialPageRoute(builder: (context) => const HomePage());
+      case ClinicRouteNames.splash:
+        return MaterialPageRoute(builder: (context) => const SplashPage());
       case ClinicRouteNames.profile:
-        return MaterialPageRoute(builder: (context) => const ProfilePage());
+        return MaterialPageRoute(builder: (context) => ProfilePage(userModel: settings.arguments as UserModel));
       case ClinicRouteNames.setting:
         return MaterialPageRoute(builder: (context) => const SettingsPage());
       case ClinicRouteNames.diagnosis:
@@ -78,7 +82,7 @@ class ClinicRoute {
       case ClinicRouteNames.detail:
         return MaterialPageRoute(builder: (context) => const DetailPage());
       default:
-        return MaterialPageRoute(builder: (context) => const HomePage());
+        return MaterialPageRoute(builder: (context) => const SplashPage());
     }
   }
 }

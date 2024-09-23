@@ -11,7 +11,8 @@ class ImageAssets {
 }
 
 class LottieAssets {
-  static const String test = "$lottiePath/lottie_currency.json";
+  static const String myLottie = "$lottiePath/lottie.json";
+  static const String myClinick = "$lottiePath/clinick.json";
 }
 
 class IconsAssets {
