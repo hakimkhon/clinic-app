@@ -6,6 +6,7 @@ import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/screens/auth/only_for_registration_stacked.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
+import 'package:clinicapp/presentation/widgets/new_text.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      MyText.text(
+                      MyText(
                         data: "Ro'yhatdan o'tish",
                         size: 26,
                         fontWeight: FontWeight.w800,

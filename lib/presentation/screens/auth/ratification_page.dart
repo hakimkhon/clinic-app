@@ -4,7 +4,7 @@ import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
-import 'package:clinicapp/presentation/widgets/my_text_widget.dart';
+import 'package:clinicapp/presentation/widgets/new_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -59,7 +59,7 @@ class _RatificationPageState extends State<RatificationPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      MyText.text(
+                      MyText(
                         data: "Tasdiqlash",
                         size: 26,
                         fontWeight: FontWeight.w800,

@@ -1,6 +1,7 @@
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:clinicapp/presentation/widgets/my_text_widget.dart';
+import 'package:clinicapp/presentation/widgets/new_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class EditProfilePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  MyText.text(
+                  const MyText(
                     data: "Ma'lumotlarni o'zgartirish",
                     size: 24,
                     fontWeight: FontWeight.w800,

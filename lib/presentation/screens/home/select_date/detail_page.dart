@@ -1,4 +1,4 @@
-import 'package:clinicapp/presentation/widgets/my_text_widget.dart';
+import 'package:clinicapp/presentation/widgets/new_text.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
@@ -11,9 +11,9 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
-        child: MyText.text(data: "Detail Page"),
+        child: MyText(data: "Detail Page"),
       ),
     );
   }

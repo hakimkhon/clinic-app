@@ -3,6 +3,7 @@ import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/widgets/my_text_widget.dart';
+import 'package:clinicapp/presentation/widgets/new_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -72,8 +73,8 @@ class SelectDataPage extends StatelessWidget {
                           //   backgroundImage:
                           //       NetworkImage(myNews[index].iconUrl),
                           // ),
-                          title: MyText.text(data: myNews[index].title),
-                          subtitle: MyText.text(
+                          title: MyText(data: myNews[index].title),
+                          subtitle: MyText(
                             data: myNews[index].description,
                             fontWeight: FontWeight.w300,
                             size: 10,

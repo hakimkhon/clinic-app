@@ -1,6 +1,7 @@
 import 'package:clinicapp/data/mock/mock_data.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/widgets/arrow_left_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
@@ -18,20 +19,7 @@ class DiagnosisPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // arrow left buttom
-              Padding(
-                padding: EdgeInsets.only(
-                  top: ConstSizes.height(6),
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_arrow_left,
-                    size: 40,
-                  ),
-                ),
-              ),
+              ArrowLeftWidget(),
               Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,

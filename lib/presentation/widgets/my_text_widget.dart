@@ -2,8 +2,8 @@ import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
 
-class MyText {
-  static text({
+class qqqext {
+  static wwwww({
     required String data,
     double size = 14,
     Color color = MyColors.textColor,
