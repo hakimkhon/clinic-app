@@ -4,7 +4,7 @@ import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
-import 'package:clinicapp/presentation/widgets/new_text.dart';
+import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -35,28 +35,13 @@ class _RatificationPageState extends State<RatificationPage> {
               children: [
                 SizedBox(
                   height: ConstSizes.height(10),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image(
-                        image: AssetImage(IconsAssets.clinic),
-                      ),
-                      SizedBox(width: 8),
-                      Text(
-                        "MZI Clinic",
-                        style: TextStyle(
-                          fontSize: 32,
-                          color: MyColors.appTitleColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                  child: const Image(
+                    image: AssetImage(IconsAssets.logoApp),
                   ),
                 ),
                 SizedBox(
-                  height: ConstSizes.height(15),
+                  height: ConstSizes.height(18),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MyText(
@@ -64,6 +49,7 @@ class _RatificationPageState extends State<RatificationPage> {
                         size: 26,
                         fontWeight: FontWeight.w800,
                         left: ConstSizes.width(4),
+                        bottom: ConstSizes.height(0.5),
                       ),
                       CustomTextFieldWidget(
                         hintText: "SMS kodni kiring",
@@ -76,18 +62,13 @@ class _RatificationPageState extends State<RatificationPage> {
                 ),
                 CustomButtonWidget(
                   title: "Tasdiqlash",
-                  bottomPadding: 25,
+                  bottomPadding: 15,
                   size: 18,
                   onTap: () {
                     MockService.checkSMSCode(
                       phoneNumber: widget.phoneNumber,
                       smsCode: smsCodeController.text,
                     );
-                    // Navigator.pushNamed(
-                    //   context,
-                    //   ClinicRouteNames.home,
-                    //   arguments: smsCodeController.text
-                    // );
                   },
                 ),
               ],

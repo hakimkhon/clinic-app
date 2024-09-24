@@ -1,3 +1,4 @@
+import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
@@ -8,9 +9,10 @@ class StakcedIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: ConstSizes.width(100),
       height: ConstSizes.height(100),
+      color: MyColors.bgBodyColor,
       child: Stack(
         children: [
           Align(

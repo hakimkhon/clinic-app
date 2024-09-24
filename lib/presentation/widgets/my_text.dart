@@ -7,14 +7,15 @@ class MyText extends StatelessWidget {
     super.key,
     required this.data,
     this.color = MyColors.textColor,
-    this.fontWeight = FontWeight.bold,
+    this.fontWeight = FontWeight.w400,
     this.fontFamily = AppFonts.lato,
     this.left = 0,
     this.right = 0,
     this.top = 0,
     this.bottom = 0,
-    this.maxLines = 5,
-    this.size = 14
+    this.maxLines = 20,
+    this.size = 14,
+    this.letterSpacing = 0
   });
   final String data;
   final Color color;
@@ -26,6 +27,7 @@ class MyText extends StatelessWidget {
   final FontWeight fontWeight;
   final String fontFamily;
   final int maxLines;
+  final double letterSpacing;
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +41,12 @@ class MyText extends StatelessWidget {
           color: color,
           fontWeight: fontWeight,
           fontFamily: fontFamily,
+          letterSpacing: letterSpacing,
+          
         ),
-        maxLines: 3,
+        maxLines: maxLines,
+      
       ),
     );
-    ;
   }
 }

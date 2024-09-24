@@ -6,6 +6,7 @@ import 'package:clinicapp/presentation/screens/home/diagnosis/diagnosis_page.dar
 import 'package:clinicapp/presentation/screens/home/home_page.dart';
 import 'package:clinicapp/presentation/screens/home/news/news_page.dart';
 import 'package:clinicapp/presentation/screens/home/news_add/news_add_page.dart';
+import 'package:clinicapp/presentation/screens/home/news_edit/news_edit_page.dart';
 import 'package:clinicapp/presentation/screens/home/select_client/select_client_page.dart';
 import 'package:clinicapp/presentation/screens/home/select_date/detail_page.dart';
 import 'package:clinicapp/presentation/screens/home/select_date/select_data_page.dart';
@@ -25,6 +26,7 @@ class ClinicRouteNames {
   static const String diagnosis = '/diagnosis';
   static const String news = '/news';
   static const String newsAdd = '/newsAdd';
+  static const String newsEdit = '/newsEdit';
   static const String editLang = '/editLang';
   static const String editProfile = '/editProfile';
   static const String selectDate = '/selectDate';
@@ -75,6 +77,8 @@ class ClinicRoute {
                 NewsPage(newsModel: settings.arguments as NewsModel));
       case ClinicRouteNames.newsAdd:
         return MaterialPageRoute(builder: (context) => const NewsAddPage());
+      case ClinicRouteNames.newsEdit:
+        return MaterialPageRoute(builder: (context) => const NewsEditPage());
       case ClinicRouteNames.editLang:
         return MaterialPageRoute(builder: (context) => const EditLangPage());
       case ClinicRouteNames.editProfile:

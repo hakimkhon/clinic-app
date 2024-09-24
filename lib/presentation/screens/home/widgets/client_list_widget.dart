@@ -14,9 +14,9 @@ class ClientListWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 8.0),
-            child: Text(
+          Padding(
+            padding: EdgeInsets.only(left: ConstSizes.width(2), top: ConstSizes.height(1)),
+            child: const Text(
               "Mijozlar:",
               style: TextStyle(
                 fontSize: 16,
@@ -27,7 +27,7 @@ class ClientListWidget extends StatelessWidget {
           ),
           Container(
             width: ConstSizes.width(100),
-            height: ConstSizes.height(22),
+            height: ConstSizes.height(20),
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),

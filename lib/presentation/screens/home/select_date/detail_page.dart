@@ -1,4 +1,4 @@
-import 'package:clinicapp/presentation/widgets/new_text.dart';
+import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {

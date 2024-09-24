@@ -6,14 +6,14 @@ import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
-class NewsAddPage extends StatefulWidget {
-  const NewsAddPage({super.key});
+class NewsEditPage extends StatefulWidget {
+  const NewsEditPage({super.key});
 
   @override
-  State<NewsAddPage> createState() => _NewsAddPageState();
+  State<NewsEditPage> createState() => _NewsEditPageState();
 }
 
-class _NewsAddPageState extends State<NewsAddPage> {
+class _NewsEditPageState extends State<NewsEditPage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController textTitle = TextEditingController();
@@ -28,7 +28,7 @@ class _NewsAddPageState extends State<NewsAddPage> {
               children: [
                 const HeaderIconsWidget(),
                 MyText(
-                  data: "Yangilik qo'shish",
+                  data: "Yangilikni o'zgatrirish",
                   size: 24,
                   fontWeight: FontWeight.w800,
                   left: ConstSizes.width(4),

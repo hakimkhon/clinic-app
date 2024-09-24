@@ -1,7 +1,9 @@
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class CalendarWidget extends StatelessWidget {
@@ -14,9 +16,16 @@ class CalendarWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 8.0),
-            child: Text(
+          // MyText(
+          //   data: "Qaysi kunni ko'rmoqchisiz?",
+          //   size: 15,
+          //   color: MyColors.containerSubTitleColor,
+          //   fontWeight: FontWeight.w400,
+          //   left: ConstSizes.width(2),
+          // ),
+          Padding(
+            padding: EdgeInsets.only(left: ConstSizes.width(2)),
+            child: const Text(
               "Qaysi kunni ko'rmoqchisiz?",
               style: TextStyle(
                 fontSize: 16,
@@ -25,7 +34,7 @@ class CalendarWidget extends StatelessWidget {
               ),
             ),
           ),
-          ZoomTapAnimation(
+          GestureDetector(
             onTap: () {
               Navigator.pushNamed(context, ClinicRouteNames.selectDate);
             },

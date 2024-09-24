@@ -3,6 +3,8 @@ import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
+import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
+import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -16,109 +18,59 @@ class SelectClientPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          const StakcedIcons(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(
-                  top: ConstSizes.height(4),
-                  bottom: ConstSizes.height(2),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            const StakcedIcons(),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const HeaderIconsWidget(pushNamed: ClinicRouteNames.diagnosis),
+                CircleAvatar(
+                  radius: 60,
+                  backgroundImage: NetworkImage(userModel.imageUrl),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.keyboard_arrow_left,
-                        size: 40,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(
-                          context,
-                          ClinicRouteNames.diagnosis,
-                        );
-                      },
-                      icon: const Icon(
-                        Icons.add,
-                        size: 40,
-                      ),
-                    ),
-                  ],
+                MyText(
+                  data: "${userModel.name} ${userModel.surname}",
+                  size: 24,
+                  fontWeight: FontWeight.w800,
+                  bottom: ConstSizes.height(1),
+                  top: ConstSizes.height(1),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: SizedBox(
-                  width: ConstSizes.width(100),
-                  height: ConstSizes.height(45),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 110,
-                        height: 110,
-                        margin: const EdgeInsets.only(bottom: 12),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(90),
-                          image: DecorationImage(
-                            image: NetworkImage(userModel.imageUrl),
-                          ),
-                          border: Border.all(color: MyColors.containerSubTitleColor)
-                        ),
-                      ),
-                      Text(
-                        "${userModel.name} ${userModel.surname}",
-                        style: const TextStyle(
-                          fontSize: 24,
-                          color: MyColors.textColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      CustomButtonWidget(
-                        title: "11 Sentabr",
-                        onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            ClinicRouteNames.diagnosis,
-                          );
-                        },
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "7 Avgust",
-                        onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            ClinicRouteNames.diagnosis,
-                          );
-                        },
-                        icon: true,
-                      ),
-                      CustomButtonWidget(
-                        title: "23 Avgust",
-                        onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            ClinicRouteNames.diagnosis,
-                          );
-                        },
-                        icon: true,
-                      ),
-                    ],
-                  ),
+                CustomButtonWidget(
+                  title: "11 Sentabr",
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      ClinicRouteNames.diagnosis,
+                    );
+                  },
+                  icon: true,
                 ),
-              ),
-            ],
-          ),
-        ],
+                CustomButtonWidget(
+                  title: "7 Avgust",
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      ClinicRouteNames.diagnosis,
+                    );
+                  },
+                  icon: true,
+                ),
+                CustomButtonWidget(
+                  title: "23 Avgust",
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      ClinicRouteNames.diagnosis,
+                    );
+                  },
+                  icon: true,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

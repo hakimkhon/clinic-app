@@ -14,9 +14,9 @@ class Urls {
       "https://www.caa.com/caaspeakers/partyHeadshot/will-smith.png";
 
   static String iconNews1 =
-      "https://cdn-icons-png.flaticon.com/512/2854/2854088.png";
+      "https://cdn-icons-png.flaticon.com/512/2955/2955494.png";
   static String iconNews2 =
-      "https://cdn-icons-png.flaticon.com/512/3209/3209992.png";
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Coronavirus._SARS-CoV-2.png/1200px-Coronavirus._SARS-CoV-2.png";
   static String iconNews3 =
       "https://cdn-icons-png.flaticon.com/512/2955/2955305.png";
   static String iconNews4 =

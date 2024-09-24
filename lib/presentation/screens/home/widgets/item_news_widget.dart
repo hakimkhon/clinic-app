@@ -16,30 +16,27 @@ class ItemNewsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          right: 30,
-          top: 0,
-          child: Image(
-            image: NetworkImage(newsModel.iconUrl),
-            width: 70,
-          ),
-        ),
         Container(
           padding: const EdgeInsets.symmetric(vertical: 5),
-          height: ConstSizes.height(24),
-          margin: const EdgeInsets.only(left: 15, right: 15, top: 22),
+          // height: ConstSizes.height(26),
+          margin: EdgeInsets.only(
+            left: ConstSizes.width(4),
+            right: ConstSizes.width(4),
+            top: ConstSizes.height(3),
+          ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             color: MyColors.containerBackgroundColor,
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 15,
+            padding: EdgeInsets.symmetric(
+              horizontal: ConstSizes.width(4),
+              vertical: ConstSizes.height(1),
             ),
             child: ZoomTapAnimation(
               onTap: () {
-                Navigator.pushNamed(context, ClinicRouteNames.news, arguments: newsModel);
+                Navigator.pushNamed(context, ClinicRouteNames.news,
+                    arguments: newsModel);
               },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,9 +60,10 @@ class ItemNewsWidget extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  ZoomTapAnimation(
+                  GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, ClinicRouteNames.news, arguments: newsModel);
+                      Navigator.pushNamed(context, ClinicRouteNames.news,
+                          arguments: newsModel);
                     },
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -73,7 +71,7 @@ class ItemNewsWidget extends StatelessWidget {
                         Text(
                           "To'liq o'qish",
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 15,
                             color: MyColors.containerSubTitleColor,
                             fontWeight: FontWeight.w600,
                           ),
@@ -88,6 +86,14 @@ class ItemNewsWidget extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+        ),
+        Positioned(
+          right: 30,
+          top: 0,
+          child: Image(
+            image: NetworkImage(newsModel.iconUrl),
+            width: 70,
           ),
         ),
       ],

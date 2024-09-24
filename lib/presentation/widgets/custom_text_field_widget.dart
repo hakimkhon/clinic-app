@@ -6,12 +6,14 @@ class CustomTextFieldWidget extends StatelessWidget {
   const CustomTextFieldWidget({
     super.key,
     required this.hintText,
-    this.topText = "",
     required this.controller,
+    this.topText = "",
+    this.maxLines = 1,
     this.type = TextInputType.text,
   });
   final String topText;
   final String hintText;
+  final int maxLines;
   final TextInputType type;
   final TextEditingController controller;
 
@@ -40,6 +42,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           TextField(
             controller: controller,
             keyboardType: type,
+            maxLines: maxLines,
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
