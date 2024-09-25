@@ -8,7 +8,6 @@ import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
 import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class EditProfilePage extends StatefulWidget {

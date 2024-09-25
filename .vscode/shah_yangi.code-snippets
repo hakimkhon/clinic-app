@@ -1,0 +1,12 @@
+{
+	"shah_yangi": {
+		"scope": "dart",
+		"prefix": "shah_yangi",
+		"body": [
+			"Padding(",
+            "padding: EdgeInsets.symmetric(horizontal: $1, vertical: $2),",
+          "),"
+		],
+		"description": "Log output to console"
+	}
+}

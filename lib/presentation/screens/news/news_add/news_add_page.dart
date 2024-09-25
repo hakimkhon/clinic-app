@@ -46,7 +46,7 @@ class _NewsAddPageState extends State<NewsAddPage> {
                   ),
                   Container(
                     alignment: Alignment.bottomCenter,
-                    height: ConstSizes.height(45),
+                    height: ConstSizes.height(40),
                     child: CustomButtonWidget(
                       title: "Qo'shish",
                       bottomPadding: 15,
