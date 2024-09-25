@@ -45,15 +45,15 @@ class _RatificationPageState extends State<RatificationPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MyText(
-                        data: "Tasdiqlash",
+                        data: LangAssets.confirm,
                         size: 26,
                         fontWeight: FontWeight.w800,
                         left: ConstSizes.width(4),
                         bottom: ConstSizes.height(0.5),
                       ),
                       CustomTextFieldWidget(
-                        hintText: "SMS kodni kiring",
-                        topText: "SMS kod",
+                        hintText: LangAssets.sendEter,
+                        topText: LangAssets.sendCod,
                         controller: smsCodeController,
                         type: TextInputType.number,
                       ),
@@ -61,7 +61,7 @@ class _RatificationPageState extends State<RatificationPage> {
                   ),
                 ),
                 CustomButtonWidget(
-                  title: "Tasdiqlash",
+                  title: LangAssets.confirm,
                   bottomPadding: 15,
                   size: 18,
                   onTap: () {

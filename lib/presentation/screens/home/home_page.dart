@@ -1,12 +1,10 @@
-import 'package:card_swiper/card_swiper.dart';
-import 'package:clinicapp/data/mock/mock_data.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/screens/home/widgets/calendar_widget.dart';
-import 'package:clinicapp/presentation/screens/home/widgets/client_list_widget.dart';
-import 'package:clinicapp/presentation/screens/home/widgets/item_news_widget.dart';
+import 'package:clinicapp/presentation/screens/news/widgets/news_swiper_widget.dart';
+import 'package:clinicapp/presentation/screens/select_client/widgets/client_list_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -51,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(width: ConstSizes.width(2)),
                       SizedBox(
-                        width: ConstSizes.width(66),
+                        // width: ConstSizes.width(45),
                         child: Text(
                           "${MockService.userModel.name} ${MockService.userModel.surname}",
                           maxLines: 2,
@@ -80,46 +78,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              SizedBox(
-                width: ConstSizes.width(100),
-                height: ConstSizes.height(27),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: -10,
-                      child: Container(
-                        height: ConstSizes.height(27),
-                        width: ConstSizes.width(100),
-                        padding: EdgeInsets.only(top: ConstSizes.height(2)),
-                        child: Swiper(
-                          pagination: const SwiperPagination(),
-                          autoplay: true,
-                          autoplayDelay: 10000,
-                          itemCount: 5,
-                          itemBuilder: (context, index) {
-                            return ItemNewsWidget(
-                                newsModel: MockData.news[index]);
-                          },
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: ConstSizes.width(5),
-                        top: ConstSizes.width(1),
-                      ),
-                      child: const Text(
-                        'Yangiliklar:',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: MyColors.containerSubTitleColor,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const NewsSwiperWidget(),
               const CalendarWidget(),
               const ClientListWidget(),
             ],

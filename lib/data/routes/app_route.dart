@@ -1,16 +1,17 @@
+import 'package:clinicapp/data/model/client_model.dart';
 import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/presentation/screens/auth/ratification_page.dart';
 import 'package:clinicapp/presentation/screens/auth/registration_page.dart';
-import 'package:clinicapp/presentation/screens/home/diagnosis/diagnosis_page.dart';
+import 'package:clinicapp/presentation/screens/diagnosis/diagnosis_page.dart';
 import 'package:clinicapp/presentation/screens/home/home_page.dart';
-import 'package:clinicapp/presentation/screens/home/news/news_page.dart';
-import 'package:clinicapp/presentation/screens/home/news_add/news_add_page.dart';
-import 'package:clinicapp/presentation/screens/home/news_edit/news_edit_page.dart';
-import 'package:clinicapp/presentation/screens/home/select_client/select_client_page.dart';
-import 'package:clinicapp/presentation/screens/home/select_date/detail_page.dart';
-import 'package:clinicapp/presentation/screens/home/select_date/select_data_page.dart';
-import 'package:clinicapp/presentation/screens/home/visit_list_page.dart';
+import 'package:clinicapp/presentation/screens/news/news_page.dart';
+import 'package:clinicapp/presentation/screens/news/news_add/news_add_page.dart';
+import 'package:clinicapp/presentation/screens/news/news_edit/news_edit_page.dart';
+import 'package:clinicapp/presentation/screens/select_client/select_client_page.dart';
+import 'package:clinicapp/presentation/screens/select_date/detail_page.dart';
+import 'package:clinicapp/presentation/screens/select_date/select_data_page.dart';
+import 'package:clinicapp/presentation/screens/visits/visit_list_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_lang/edit_lang_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_profile/edit_profile_page.dart';
 import 'package:clinicapp/presentation/screens/profile/profile_page.dart';
@@ -58,17 +59,22 @@ class ClinicRoute {
       case ClinicRouteNames.splash:
         return MaterialPageRoute(builder: (context) => const SplashPage());
       case ClinicRouteNames.profile:
-        return MaterialPageRoute(builder: (context) => ProfilePage(userModel: settings.arguments as UserModel));
+        return MaterialPageRoute(
+            builder: (context) =>
+                ProfilePage(userModel: settings.arguments as UserModel));
       case ClinicRouteNames.setting:
         return MaterialPageRoute(builder: (context) => const SettingsPage());
       case ClinicRouteNames.diagnosis:
-        return MaterialPageRoute(builder: (context) => const DiagnosisPage());
+        return MaterialPageRoute(
+            builder: (context) => const DiagnosisPage(
+                  // diagnosisModel: settings.arguments as DiagnosisModel,
+                ));
       case ClinicRouteNames.visitList:
         return MaterialPageRoute(builder: (context) => const VisitListPage());
       case ClinicRouteNames.selectClient:
         return MaterialPageRoute(
-            builder: (context) =>
-                SelectClientPage(userModel: settings.arguments as UserModel));
+            builder: (context) => SelectClientPage(
+                clientModel: settings.arguments as ClientModel));
       case ClinicRouteNames.selectDate:
         return MaterialPageRoute(builder: (context) => const SelectDataPage());
       case ClinicRouteNames.news:

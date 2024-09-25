@@ -1,9 +1,10 @@
-import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
 import 'package:clinicapp/presentation/widgets/my_text.dart';
 import 'package:clinicapp/presentation/widgets/stakced_icons.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class EditLangPage extends StatelessWidget {
@@ -21,7 +22,7 @@ class EditLangPage extends StatelessWidget {
               children: [
                 const HeaderIconsWidget(),
                 MyText(
-                  data: "Tilni o'zgartirish",
+                  data: LangAssets.changLang,
                   size: 24,
                   fontWeight: FontWeight.w800,
                   left: ConstSizes.width(4),
@@ -29,23 +30,29 @@ class EditLangPage extends StatelessWidget {
                 ),
                 CustomButtonWidget(
                   size: 18,
-                  title: "O'zbek",
+                  title: LangAssets.langUz,
                   onTap: () {
-                    Navigator.pop(context);
+                    context.setLocale(const Locale('uz', 'UZ'));
+                    // setState(() {});
+                    // Navigator.pop(context);
                   },
                 ),
                 CustomButtonWidget(
                   size: 18,
-                  title: "Ruscha",
+                  title: LangAssets.langRu,
                   onTap: () {
-                    Navigator.pop(context);
+                    context.setLocale(const Locale('ru', 'RU'));
+                    // setState(() {});
+                    // Navigator.pop(context);
                   },
                 ),
                 CustomButtonWidget(
                   size: 18,
-                  title: "Inglizcha",
+                  title: LangAssets.langEn,
                   onTap: () {
-                    Navigator.pop(context);
+                    context.setLocale(const Locale('en', 'EN'));
+                    // setState(() {});
+                    // Navigator.pop(context);
                   },
                 ),
               ],

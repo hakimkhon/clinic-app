@@ -12,6 +12,12 @@ class Urls {
       "https://pbs.twimg.com/profile_images/1834687464239239168/sikvojgY_400x400.jpg";
   static String humans7 =
       "https://www.caa.com/caaspeakers/partyHeadshot/will-smith.png";
+  static String humans8 =
+      "https://www.stylecraze.com/wp-content/uploads/2013/07/Women-With-Beautiful-Face-400x400.jpg.webp";
+  static String humans9 =
+      "https://i0.wp.com/calmatters.org/wp-content/uploads/2021/05/maria-elena-durazo-1953.jpg?w=780&ssl=1";
+  static String humans10 =
+      "https://media.licdn.com/dms/image/D5603AQFPL_4p2GIPUw/profile-displayphoto-shrink_400_400/0/1719795513610?e=2147483647&v=beta&t=QNtKz9QlsM08SCiFbTKJ5CxMxP9cJ7JuUEkelNd_RWM";
 
   static String iconNews1 =
       "https://cdn-icons-png.flaticon.com/512/2955/2955494.png";

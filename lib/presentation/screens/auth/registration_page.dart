@@ -39,14 +39,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MyText(
-                        data: "Ro'yhatdan o'tish",
+                        data: LangAssets.registration,
                         size: 26,
                         fontWeight: FontWeight.w800,
                         left: ConstSizes.width(4),
                         bottom: ConstSizes.height(0.5),
                       ),
                       CustomTextFieldWidget(
-                        hintText: "Telefon raqam",
+                        hintText: LangAssets.phoneNum,
                         controller: phoneNumberController,
                         type: TextInputType.phone,
                       ),
@@ -54,7 +54,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ),
                 ),
                 CustomButtonWidget(
-                  title: "SMS yuborish",
+                  title: LangAssets.sendSms,
                   bottomPadding: 15,
                   size: 18,
                   onTap: () {

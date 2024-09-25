@@ -12,6 +12,7 @@ class CustomButtonWidget extends StatelessWidget {
     this.icon = false,
     this.color = MyColors.btnBackgroundColor,
     this.bottomPadding = 8,
+    this.topPadding = 0,
     this.size = 16,
   });
   final String title;
@@ -19,6 +20,7 @@ class CustomButtonWidget extends StatelessWidget {
   final bool icon;
   final Color color;
   final double bottomPadding;
+  final double topPadding;
   final double size;
 
   @override
@@ -32,9 +34,11 @@ class CustomButtonWidget extends StatelessWidget {
           child: Container(
             height: ConstSizes.height(7),
             margin: EdgeInsets.only(
-                left: ConstSizes.width(4),
-                right: ConstSizes.width(4),
-                bottom: bottomPadding),
+              left: ConstSizes.width(4),
+              right: ConstSizes.width(4),
+              bottom: bottomPadding,
+              top: topPadding,
+            ),
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), color: color),

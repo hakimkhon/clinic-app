@@ -1,0 +1,22 @@
+{
+    "edit_data":"Ma'lumotlarni o'zgartirish",
+    "edit_lang":"Tilni o'zgartirish",
+    "phone_num":"Telefon raqam",
+    "first_name":"Ism",
+    "last_name":"Familiya",
+    "confirm":"Tasdiqlash",
+    "send_sms":"SMS yuborish",
+    "lang_en":"Inglizcha",
+    "lang_ru":"Ruscha",
+    "lang_uz":"O'zbek",
+    "registration":"Ro'yhatdan o'tish", 
+    "send_kod":"SMS kod",
+    "send_enter":"SMS kodni kiriting",
+    "offerta":"Ommaviy offerta",
+    "news":"Yangiliklar",
+    "more":"To'liq o'qish",
+    "select_data":"Qaysi kunni ko'rmoqchisiz",
+    "clients":"Mijozlar",
+    "account":"Akkauntdan chiqish"
+}
+

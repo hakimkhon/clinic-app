@@ -1,4 +1,4 @@
-import 'package:clinicapp/data/model/user_model.dart';
+import 'package:clinicapp/data/model/client_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +7,11 @@ import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 class ItemClientListView extends StatelessWidget {
   const ItemClientListView({
     super.key,
-    required this.userModel,
+    required this.clientModel,
+    // required this.diagnosisModel,
   });
-  final UserModel userModel;
+  final ClientModel clientModel;
+  // final DiagnosisModel diagnosisModel;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class ItemClientListView extends StatelessWidget {
         Navigator.pushNamed(
           context,
           ClinicRouteNames.selectClient,
-          arguments: userModel,
+          arguments: (clientModel),
         );
       },
       child: Column(
@@ -27,7 +29,7 @@ class ItemClientListView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                userModel.name,
+                clientModel.firstName,
                 style: const TextStyle(
                   fontSize: 14,
                   color: MyColors.subTextColor,
@@ -36,7 +38,7 @@ class ItemClientListView extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                userModel.surname,
+                clientModel.lastName,
                 style: const TextStyle(
                   fontSize: 14,
                   color: MyColors.subTextColor,
@@ -45,7 +47,7 @@ class ItemClientListView extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                userModel.date,
+                clientModel.timeInterval,
                 style: const TextStyle(
                   fontSize: 16,
                   color: MyColors.subTextColor,

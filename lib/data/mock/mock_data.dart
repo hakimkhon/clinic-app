@@ -32,12 +32,18 @@ class MockData {
       fullFormDiagnos: Descriptions.diagnosisDescription4,
       imgUrl: Urls.diagnosisImg4,
     ),
+    DiagnosisModel(
+      date: DateTime(2024, 09, 3),
+      shortFormDiagnos: "Oyoq sinishi",
+      fullFormDiagnos: Descriptions.diagnosisDescription2,
+      imgUrl: Urls.diagnosisImg2,
+    ),
   ];
 
 //Bu joyda yangiliklarni API ulaguncha test sifatida foydalandik
   static List<NewsModel> news = [
     NewsModel(
-      title: "Covid-19",
+      title: "Covid",
       description: Descriptions.newsDescription1,
       iconUrl: Urls.iconNews1,
     ),
@@ -72,7 +78,6 @@ class MockData {
       imageUrl: Urls.humans3,
       phoneNumber: "911111111",
       smsCod: "1111",
-      date: "10:00-11:00"
     ),
     UserModel(
       name: "Alimardon",
@@ -80,7 +85,6 @@ class MockData {
       imageUrl: Urls.humans2,
       phoneNumber: "922222222",
       smsCod: "2222",
-      date: "10:00-12:00"
     ),
     UserModel(
       name: "Jasurbek",
@@ -88,7 +92,6 @@ class MockData {
       imageUrl: Urls.humans3,
       phoneNumber: "933333333",
       smsCod: "3333",
-      date: "09:00-11:00"
     ),
     UserModel(
       name: "Otabek",
@@ -96,7 +99,6 @@ class MockData {
       imageUrl: Urls.humans4,
       phoneNumber: "944444444",
       smsCod: "4444",
-      date: "12:00-13:00"
     ),
     UserModel(
       name: "Nosirxon",
@@ -104,7 +106,6 @@ class MockData {
       imageUrl: Urls.humans5,
       phoneNumber: "955555555",
       smsCod: "5555",
-      date: "10:00-11:00"
     ),
   ];
 
@@ -113,41 +114,43 @@ class MockData {
       firstName: "Tojiyev",
       lastName: "Timur",
       timeInterval: "10:00-11:00",
+      image: Urls.humans7
     ),
     ClientModel(
-      firstName: "Umarov",
-      lastName: "Abror",
+      firstName: "Umarova",
+      lastName: "Adolat",
       timeInterval: "13:00-14:00",
+      image: Urls.humans10
     ),
     ClientModel(
       firstName: "Alijonov",
       lastName: "G'ani",
       timeInterval: "15:00-16:00",
+      image: Urls.humans5
     ),
     ClientModel(
-      firstName: "Safarov",
-      lastName: "Botir",
+      firstName: "Safarova",
+      lastName: "Barchinoy",
       timeInterval: "15:00-16:00",
+      image: Urls.humans9
     ),
     ClientModel(
       firstName: "Odilov",
       lastName: "Nosir",
       timeInterval: "15:00-16:00",
+      image: Urls.humans3
     ),
     ClientModel(
       firstName: "Otabekova",
       lastName: "Oydina",
       timeInterval: "15:00-16:00",
+      image: Urls.humans8
     ),
     ClientModel(
       firstName: "Xatamov",
       lastName: "Jamol",
       timeInterval: "15:00-16:00",
-    ),
-    ClientModel(
-      firstName: "Sobirova",
-      lastName: "Anora",
-      timeInterval: "15:00-16:00",
+      image: Urls.humans1
     ),
   ];
 }

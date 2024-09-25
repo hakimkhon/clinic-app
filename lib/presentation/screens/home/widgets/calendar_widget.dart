@@ -1,10 +1,8 @@
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
-import 'package:clinicapp/presentation/widgets/my_text.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class CalendarWidget extends StatelessWidget {
   const CalendarWidget({super.key});
@@ -25,9 +23,9 @@ class CalendarWidget extends StatelessWidget {
           // ),
           Padding(
             padding: EdgeInsets.only(left: ConstSizes.width(2)),
-            child: const Text(
-              "Qaysi kunni ko'rmoqchisiz?",
-              style: TextStyle(
+            child: Text(
+              LangAssets.selectData,
+              style: const TextStyle(
                 fontSize: 16,
                 color: MyColors.containerSubTitleColor,
                 fontWeight: FontWeight.w400,

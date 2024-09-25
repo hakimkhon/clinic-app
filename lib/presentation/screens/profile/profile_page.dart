@@ -2,6 +2,7 @@ import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
 import 'package:clinicapp/presentation/widgets/my_text.dart';
@@ -36,7 +37,7 @@ class ProfilePage extends StatelessWidget {
                   top: ConstSizes.height(1),
                 ),
                 CustomButtonWidget(
-                  title: "Ma'lumotlarni o'zgartirish",
+                  title: LangAssets.changData,
                   onTap: () {
                     Navigator.pushNamed(
                         context, ClinicRouteNames.editProfile);
@@ -44,19 +45,19 @@ class ProfilePage extends StatelessWidget {
                   icon: true,
                 ),
                 CustomButtonWidget(
-                  title: "Tilni o'zgartirish",
+                  title: LangAssets.changLang,
                   onTap: () {
                     Navigator.pushNamed(context, ClinicRouteNames.editLang);
                   },
                   icon: true,
                 ),
                 CustomButtonWidget(
-                  title: "Ommaviy offerta",
+                  title: LangAssets.offerta,
                   onTap: () {},
                   icon: true,
                 ),
                 CustomButtonWidget(
-                  title: "Akkauntdan chiqish",
+                  title: LangAssets.account,
                   onTap: () {
                     exit;
                     Navigator.pushNamedAndRemoveUntil(

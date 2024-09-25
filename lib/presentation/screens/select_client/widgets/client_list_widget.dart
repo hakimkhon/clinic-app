@@ -1,7 +1,8 @@
 import 'package:clinicapp/data/mock/mock_data.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
-import 'package:clinicapp/presentation/screens/home/widgets/item_client_list_view.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
+import 'package:clinicapp/presentation/screens/select_client/widgets/item_client_list_view.dart';
 import 'package:flutter/material.dart';
 
 class ClientListWidget extends StatelessWidget {
@@ -16,9 +17,9 @@ class ClientListWidget extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(left: ConstSizes.width(2), top: ConstSizes.height(1)),
-            child: const Text(
-              "Mijozlar:",
-              style: TextStyle(
+            child: Text(
+              LangAssets.clients,
+              style: const TextStyle(
                 fontSize: 16,
                 color: MyColors.containerSubTitleColor,
                 fontWeight: FontWeight.w400,
@@ -34,10 +35,10 @@ class ClientListWidget extends StatelessWidget {
               color: MyColors.containerBackgroundColor,
             ),
             child: ListView.builder(
-              itemCount: MockData.users.length,
+              itemCount: MockData.clients.length,
               // prototypeItem: const ListTile(),
               itemBuilder: (context, index) {
-                return ItemClientListView(userModel: MockData.users[index]);
+                return ItemClientListView(clientModel: MockData.clients[index]);
               },
             ),
           ),
