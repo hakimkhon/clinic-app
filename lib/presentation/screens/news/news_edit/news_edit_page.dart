@@ -1,5 +1,6 @@
 import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
@@ -39,18 +40,18 @@ class _NewsEditPageState extends State<NewsEditPage> {
                 children: [
                   const HeaderIconsWidget(),
                   MyText(
-                    data: "Yangilikni o'zgatrirish",
+                    data: LangAssets.changNews,
                     size: 24,
                     fontWeight: FontWeight.w800,
                     left: ConstSizes.width(4),
                     bottom: ConstSizes.height(1),
                   ),
                   CustomTextFieldWidget(
-                    hintText: "Sarlavha",
+                    hintText: LangAssets.title,
                     controller: textTitle,
                   ),
                   CustomTextFieldWidget(
-                    hintText: "Matn",
+                    hintText: LangAssets.text,
                     controller: subTitle,
                     maxLines: 10,
                   ),
@@ -58,7 +59,7 @@ class _NewsEditPageState extends State<NewsEditPage> {
                     alignment: Alignment.bottomCenter,
                     height: ConstSizes.height(45),
                     child: CustomButtonWidget(
-                      title: "Qo'shish",
+                      title: LangAssets.add,
                       bottomPadding: 15,
                       onTap: () {},
                     ),

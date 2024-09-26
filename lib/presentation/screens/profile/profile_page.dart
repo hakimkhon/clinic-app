@@ -1,5 +1,6 @@
 import 'package:clinicapp/data/model/user_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
+import 'package:clinicapp/data/routes/navigation_service.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
@@ -39,8 +40,7 @@ class ProfilePage extends StatelessWidget {
                 CustomButtonWidget(
                   title: LangAssets.changData,
                   onTap: () {
-                    Navigator.pushNamed(
-                        context, ClinicRouteNames.editProfile);
+                    Navigator.pushNamed(context, ClinicRouteNames.editProfile);
                   },
                   icon: true,
                 ),
@@ -60,11 +60,6 @@ class ProfilePage extends StatelessWidget {
                   title: LangAssets.account,
                   onTap: () {
                     exit;
-                    Navigator.pushNamedAndRemoveUntil(
-                      context,
-                      ClinicRouteNames.registration,
-                      (settings) => false,
-                    );
                   },
                   color: MyColors.hindTextColor,
                 ),
@@ -79,5 +74,7 @@ class ProfilePage extends StatelessWidget {
   get exit async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove('phone');
+    NavigationService.instance
+        .navigateMyScreenAndRemoveUntil(routeName: ClinicRouteNames.splash);
   }
 }

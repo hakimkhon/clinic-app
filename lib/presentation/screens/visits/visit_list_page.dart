@@ -1,4 +1,5 @@
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
 import 'package:clinicapp/presentation/widgets/my_text.dart';
@@ -20,14 +21,14 @@ class VisitListPage extends StatelessWidget {
               children: [
                 const HeaderIconsWidget(),
                 MyText(
-                  data: "Tashriflar ro'yhati",
+                  data: LangAssets.visitList,
                   size: 24,
                   fontWeight: FontWeight.w800,
                   left: ConstSizes.width(4),
                   bottom: ConstSizes.height(2),
                 ),
-                CustomButtonWidget(title: "Ketdi", onTap: () {}),
-                CustomButtonWidget(title: "Keldi", onTap: () {}),
+                CustomButtonWidget(title: LangAssets.went, onTap: () {}),
+                CustomButtonWidget(title: LangAssets.come, onTap: () {}),
                 const Spacer(),
                 //Namuna uchun
                 Center(

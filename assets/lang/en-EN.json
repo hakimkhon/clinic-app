@@ -17,5 +17,15 @@
     "more":"more info",
     "select_data":"Which day do you want to see?",
     "clients":"Clients",
-    "account":"Sign out of the account"
+    "account":"Sign out of the account",
+    "title":"Headline",
+    "text":"Text",
+    "add":"Add",
+    "chang":"Change",
+    "save":"Save",
+    "visit_list":"List of visits",
+    "come":"Come",
+    "went":"Went",
+    "chang_news":"Change news",
+    "add_news":"Add news"
 }

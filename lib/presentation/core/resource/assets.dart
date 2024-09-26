@@ -42,6 +42,16 @@ class LangAssets {
   static String selectData = "select_data".tr();
   static String clients = "clients".tr();
   static String account = "account".tr();
+  static String text = "text".tr();
+  static String title = "title".tr();
+  static String add = "add".tr();
+  static String chang = "chang".tr();
+  static String changNews = "chang_news".tr();
+  static String save = "save".tr();
+  static String visitList = "visit_list".tr();
+  static String come = "come".tr();
+  static String went = "went".tr();
+  static String addNews = "add_news".tr();
 }
 
 class AppFonts {

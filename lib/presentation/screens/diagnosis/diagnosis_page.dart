@@ -51,7 +51,7 @@ class DiagnosisPage extends StatelessWidget {
                 ),
                 const Spacer(),
                 CustomButtonWidget(
-                  title: "Saqlash",
+                  title: LangAssets.save,
                   bottomPadding: 15,
                   onTap: () {
                     Navigator.pop(context);

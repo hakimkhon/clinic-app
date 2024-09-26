@@ -17,6 +17,16 @@
     "more":"To'liq o'qish",
     "select_data":"Qaysi kunni ko'rmoqchisiz",
     "clients":"Mijozlar",
-    "account":"Akkauntdan chiqish"
+    "account":"Akkauntdan chiqish",
+    "title":"Sarlavha",
+    "text":"Matn",
+    "add":"Qo'shish",
+    "chang":"O'zgartirish",
+    "save":"Saqlash",
+    "visit_list":"Tashriflar ro'yhati",
+    "come":"Keldi",
+    "went":"Ketdi",
+    "chang_news":"Yangilikni o'zgatrirish",
+    "add_news":"Yangilik qo'shish"
 }
 

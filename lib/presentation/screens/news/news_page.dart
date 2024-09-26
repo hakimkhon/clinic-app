@@ -54,7 +54,7 @@ class NewsPage extends StatelessWidget {
                 ),
                 const Spacer(),
                 CustomButtonWidget(
-                  title: "O'zgartirish",
+                  title: LangAssets.chang,
                   bottomPadding: 15,
                   onTap: () {
                     Navigator.pushNamed(

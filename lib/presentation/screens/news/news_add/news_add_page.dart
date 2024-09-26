@@ -1,4 +1,5 @@
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
 import 'package:clinicapp/presentation/widgets/custom_text_field_widget.dart';
 import 'package:clinicapp/presentation/widgets/header_icons_widget.dart';
@@ -18,6 +19,8 @@ class _NewsAddPageState extends State<NewsAddPage> {
   Widget build(BuildContext context) {
     TextEditingController textTitle = TextEditingController();
     TextEditingController subTitle = TextEditingController();
+
+    // Emulyator o'zgarganda pastda turgan button joyi o'zgarib ketyapti shuni qanday xal qilish mumkin?
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -29,18 +32,18 @@ class _NewsAddPageState extends State<NewsAddPage> {
                 children: [
                   const HeaderIconsWidget(),
                   MyText(
-                    data: "Yangilik qo'shish",
+                    data: LangAssets.addNews,
                     size: 24, 
                     fontWeight: FontWeight.w800,
                     left: ConstSizes.width(4),
                     bottom: ConstSizes.height(1),
                   ),
                   CustomTextFieldWidget(
-                    hintText: "Sarlavha",
+                    hintText: LangAssets.title,
                     controller: textTitle,
                   ),
                   CustomTextFieldWidget(
-                    hintText: "Matn",
+                    hintText: LangAssets.text,
                     controller: subTitle,
                     maxLines: 10,
                   ),
@@ -48,7 +51,7 @@ class _NewsAddPageState extends State<NewsAddPage> {
                     alignment: Alignment.bottomCenter,
                     height: ConstSizes.height(40),
                     child: CustomButtonWidget(
-                      title: "Qo'shish",
+                      title: LangAssets.add,
                       bottomPadding: 15,
                       onTap: () {},
                     ),
