@@ -27,8 +27,16 @@ class VisitListPage extends StatelessWidget {
                   left: ConstSizes.width(4),
                   bottom: ConstSizes.height(2),
                 ),
-                CustomButtonWidget(title: LangAssets.went, onTap: () {}),
-                CustomButtonWidget(title: LangAssets.come, onTap: () {}),
+                CustomButtonWidget(
+                    title: LangAssets.went,
+                    onTap: () {
+                      Navigator.pop(context);
+                    }),
+                CustomButtonWidget(
+                    title: LangAssets.come,
+                    onTap: () {
+                      Navigator.pop(context);
+                    }),
                 const Spacer(),
                 //Namuna uchun
                 Center(
@@ -62,7 +70,6 @@ class VisitListPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                 ),
                 const SizedBox(height: 15)
               ],

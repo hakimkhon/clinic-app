@@ -5,7 +5,6 @@ import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class CalendarWidget extends StatelessWidget {
   const CalendarWidget({super.key});
@@ -34,9 +33,10 @@ class CalendarWidget extends StatelessWidget {
               color: MyColors.containerBackgroundColor,
             ),
             child: TableCalendar(
-              onDaySelected: (selectedDay, focusedDay) { 
+              onDaySelected: (selectedDay, focusedDay) {
                 //selectedDay bilan focusedDay farqi va qachon ishlatiladi
-                Navigator.pushNamed(context, ClinicRouteNames.detail, arguments: selectedDay);
+                Navigator.pushNamed(context, ClinicRouteNames.detail,
+                    arguments: selectedDay);
               },
               focusedDay: DateTime.now(),
               firstDay: DateTime.now(),
@@ -46,8 +46,9 @@ class CalendarWidget extends StatelessWidget {
               calendarStyle: CalendarStyle(
                 outsideDecoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
-                  color: Colors.white.withOpacity(0.4),
+                  color: Colors.white.withOpacity(0.6),
                 ),
+                outsideTextStyle: const TextStyle(color: Colors.black),
                 disabledDecoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   color: Colors.white.withOpacity(0.4),
@@ -58,12 +59,14 @@ class CalendarWidget extends StatelessWidget {
                 ),
                 todayDecoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
-                  color: MyColors.btnBackgroundColor,
+                  color: Colors.white,
                 ),
+                todayTextStyle: const TextStyle(color: Colors.black),
                 weekendDecoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   color: Colors.white,
                 ),
+                weekendTextStyle: const TextStyle(color: Colors.black),
               ),
               headerStyle: HeaderStyle(
                 formatButtonVisible: false,
