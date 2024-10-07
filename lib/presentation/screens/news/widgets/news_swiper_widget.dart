@@ -13,16 +13,16 @@ class NewsSwiperWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final pageController = PageController();
     return SizedBox(
+      height: ConstSizes.height(22),
       width: ConstSizes.width(100),
-      height: ConstSizes.height(27),
       child: Stack(
         children: [
           Positioned(
             top: -10,
             child: Container(
-              height: ConstSizes.height(27),
+              height: ConstSizes.height(22),
               width: ConstSizes.width(100),
-              padding: EdgeInsets.only(top: ConstSizes.height(2)),
+              padding: EdgeInsets.only(top: ConstSizes.height(1)),
               child: PageView.builder(
                 controller: pageController,
                 itemCount: MockData.news.length,
@@ -51,7 +51,7 @@ class NewsSwiperWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(
               left: ConstSizes.width(5),
-              top: ConstSizes.width(2),
+              top: ConstSizes.width(1),
             ),
             child: Text(
               LangAssets.news,

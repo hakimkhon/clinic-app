@@ -2,6 +2,7 @@ import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
+import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:flutter/material.dart';
 
 class ItemNewsWidget extends StatelessWidget {
@@ -59,18 +60,18 @@ class ItemNewsWidget extends StatelessWidget {
                     Navigator.pushNamed(context, ClinicRouteNames.news,
                         arguments: newsModel);
                   },
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        "To'liq o'qish",
-                        style: TextStyle(
+                        LangAssets.more,
+                        style: const TextStyle(
                           fontSize: 15,
                           color: MyColors.containerSubTitleColor,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.chevron_right_sharp,
                         color: MyColors.containerSubTitleColor,
                       )

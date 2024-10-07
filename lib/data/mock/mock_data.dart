@@ -153,4 +153,18 @@ class MockData {
       image: Urls.humans1
     ),
   ];
+   static final List<String> month = [
+    "Yanvar",
+    "Fevral",
+    "Mart",
+    "Aprel",
+    "May",
+    "Iyun",
+    "Iyul",
+    "Avgust",
+    "Sentyabr",
+    "Oktyabr",
+    "Noyabr",
+    "Dekabr",
+  ];
 }

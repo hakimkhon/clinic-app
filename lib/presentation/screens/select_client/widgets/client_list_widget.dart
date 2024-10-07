@@ -28,7 +28,7 @@ class ClientListWidget extends StatelessWidget {
           ),
           Container(
             width: ConstSizes.width(100),
-            height: ConstSizes.height(20),
+            height: ConstSizes.height(23),
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),

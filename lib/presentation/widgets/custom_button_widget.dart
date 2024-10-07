@@ -49,7 +49,7 @@ class CustomButtonWidget extends StatelessWidget {
                 color: MyColors.btnTextColor,
                 fontWeight: FontWeight.w400,
                 fontFamily: AppFonts.lexendTera,
-                letterSpacing: -2,
+                letterSpacing: -1.7,
               ),
             ),
           ),

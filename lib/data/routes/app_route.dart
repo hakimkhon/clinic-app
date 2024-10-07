@@ -9,8 +9,7 @@ import 'package:clinicapp/presentation/screens/news/news_page.dart';
 import 'package:clinicapp/presentation/screens/news/news_add/news_add_page.dart';
 import 'package:clinicapp/presentation/screens/news/news_edit/news_edit_page.dart';
 import 'package:clinicapp/presentation/screens/select_client/select_client_page.dart';
-import 'package:clinicapp/presentation/screens/select_date/detail_page.dart';
-import 'package:clinicapp/presentation/screens/select_date/select_data_page.dart';
+import 'package:clinicapp/presentation/screens/select_date/detail_calendar.dart';
 import 'package:clinicapp/presentation/screens/visits/visit_list_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_lang/edit_lang_page.dart';
 import 'package:clinicapp/presentation/screens/profile/edit_profile/edit_profile_page.dart';
@@ -67,7 +66,7 @@ class ClinicRoute {
       case ClinicRouteNames.diagnosis:
         return MaterialPageRoute(
             builder: (context) => const DiagnosisPage(
-                  // diagnosisModel: settings.arguments as DiagnosisModel,
+                // diagnosisModel: settings.arguments as DiagnosisModel,
                 ));
       case ClinicRouteNames.visitList:
         return MaterialPageRoute(builder: (context) => const VisitListPage());
@@ -75,8 +74,8 @@ class ClinicRoute {
         return MaterialPageRoute(
             builder: (context) => SelectClientPage(
                 clientModel: settings.arguments as ClientModel));
-      case ClinicRouteNames.selectDate:
-        return MaterialPageRoute(builder: (context) => const SelectDataPage());
+      // case ClinicRouteNames.selectDate:
+      //   return MaterialPageRoute(builder: (context) => const SelectDataPage());
       case ClinicRouteNames.news:
         return MaterialPageRoute(
             builder: (context) =>
@@ -90,7 +89,9 @@ class ClinicRoute {
       case ClinicRouteNames.editProfile:
         return MaterialPageRoute(builder: (context) => const EditProfilePage());
       case ClinicRouteNames.detail:
-        return MaterialPageRoute(builder: (context) => const DetailPage());
+        return MaterialPageRoute(
+            builder: (context) =>
+                DetailCalendar(day: settings.arguments as DateTime));
       default:
         return MaterialPageRoute(builder: (context) => const SplashPage());
     }
