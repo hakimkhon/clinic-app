@@ -64,18 +64,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   title: LangAssets.confirm,
                   topPadding: ConstSizes.height(2),
                   onTap: () {
-                    // for (int i = 0; i < MockData.users.length; i++) {
-                    //   if (MockData.users[i] == MockService.userModel.phoneNumber) {
-                    //     MockData.users[i] = UserModel(
-                    //       name: nameController.text,
-                    //       surname: surnameController.text,
-                    //       imageUrl: MockService.userModel.imageUrl,
-                    //       phoneNumber: phoneNomberController.text,
-                    //       smsCod: MockService.userModel.smsCod,
-                    //     );
-                    //     break;
-                    //   }
-                    // }
                     MockService.userModel = UserModel(
                       name: nameController.text,
                       surname: surnameController.text,

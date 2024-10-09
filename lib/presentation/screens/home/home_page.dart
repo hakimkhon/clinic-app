@@ -25,64 +25,62 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         bottom: false,
         //SingleChildScrollView widgeti ekranni pastidan klavish chiqqanda ekranni balandligini o'zgartirmaslik uchun
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(
-                  left: ConstSizes.width(4),
-                  right: ConstSizes.width(1),
-                  top: ConstSizes.height(1),
-                  bottom: ConstSizes.height(1),
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, ClinicRouteNames.profile,
-                        arguments: MockService.userModel);
-                  },
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: ConstSizes.width(7),
-                        backgroundImage:
-                            NetworkImage(MockService.userModel.imageUrl),
-                      ),
-                      SizedBox(width: ConstSizes.width(2)),
-                      SizedBox(
-                        // width: ConstSizes.width(45),
-                        child: Text(
-                          "${MockService.userModel.name} ${MockService.userModel.surname}",
-                          maxLines: 2,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            color: MyColors.textColor,
-                            fontWeight: FontWeight.w600,
-                          ),
+        child: ListView(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                left: ConstSizes.width(4),
+                right: ConstSizes.width(1),
+                top: ConstSizes.height(1),
+                bottom: ConstSizes.height(1),
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, ClinicRouteNames.profile,
+                      arguments: MockService.userModel);
+                },
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: ConstSizes.width(7),
+                      backgroundImage:
+                          NetworkImage(MockService.userModel.imageUrl),
+                    ),
+                    SizedBox(width: ConstSizes.width(2)),
+                    SizedBox(
+                      // width: ConstSizes.width(45),
+                      child: Text(
+                        "${MockService.userModel.name} ${MockService.userModel.surname}",
+                        maxLines: 2,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: MyColors.textColor,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
-                      const Spacer(),
-                      IconButton(
-                        onPressed: () {
-                          Navigator.pushNamed(
-                            context,
-                            ClinicRouteNames.visitList,
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.calendar_month_outlined,
-                          size: 34,
-                          color: MyColors.hindTextColor,
-                        ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          ClinicRouteNames.visitList,
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.calendar_month_outlined,
+                        size: 34,
+                        color: MyColors.hindTextColor,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-              const NewsSwiperWidget(),
-              const CalendarWidget(),
-              const ClientListWidget(),
-            ],
-          ),
+            ),
+            const NewsSwiperWidget(),
+            const CalendarWidget(),
+            const ClientListWidget(),
+          ],
         ),
       ),
     );

@@ -8,10 +8,8 @@ class ItemClientListView extends StatelessWidget {
   const ItemClientListView({
     super.key,
     required this.clientModel,
-    // required this.diagnosisModel,
   });
   final ClientModel clientModel;
-  // final DiagnosisModel diagnosisModel;
 
   @override
   Widget build(BuildContext context) {

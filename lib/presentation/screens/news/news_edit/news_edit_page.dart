@@ -1,3 +1,5 @@
+import 'package:clinicapp/data/model/news_model.dart';
+import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
@@ -16,13 +18,13 @@ class NewsEditPage extends StatefulWidget {
 }
 
 class _NewsEditPageState extends State<NewsEditPage> {
-  TextEditingController textTitle = TextEditingController();
-  TextEditingController subTitle = TextEditingController();
+  TextEditingController titleController = TextEditingController();
+  TextEditingController subTitleController = TextEditingController();
 
   @override
   void initState() {
-    textTitle.text = MockService.newsModel.title;
-    subTitle.text = MockService.newsModel.description;
+    titleController.text = MockService.newsModel.title;
+    subTitleController.text = MockService.newsModel.description;
     super.initState();
   }
 
@@ -48,11 +50,11 @@ class _NewsEditPageState extends State<NewsEditPage> {
                   ),
                   CustomTextFieldWidget(
                     hintText: LangAssets.title,
-                    controller: textTitle,
+                    controller: titleController,
                   ),
                   CustomTextFieldWidget(
                     hintText: LangAssets.text,
-                    controller: subTitle,
+                    controller: subTitleController,
                     maxLines: 10,
                   ),
                   Container(
@@ -61,7 +63,15 @@ class _NewsEditPageState extends State<NewsEditPage> {
                     child: CustomButtonWidget(
                       title: LangAssets.add,
                       bottomPadding: 15,
-                      onTap: () {},
+                      onTap: () {
+                        MockService.newsModel = NewsModel(
+                          title: titleController.text,
+                          description: subTitleController.text,
+                          iconUrl: MockService.newsModel.iconUrl,
+                        );
+                        Navigator.pushNamedAndRemoveUntil(context,
+                            ClinicRouteNames.home, (predicate) => false);
+                      },
                     ),
                   ),
                 ],

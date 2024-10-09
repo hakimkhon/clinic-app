@@ -10,39 +10,39 @@ class ClientListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: ConstSizes.width(2), top: ConstSizes.height(1)),
-            child: Text(
-              LangAssets.clients,
-              style: const TextStyle(
-                fontSize: 16,
-                color: MyColors.containerSubTitleColor,
-                fontWeight: FontWeight.w400,
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  left: ConstSizes.width(2), top: ConstSizes.height(1)),
+              child: Text(
+                LangAssets.clients,
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: MyColors.containerSubTitleColor,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
-          ),
-          Container(
-            width: ConstSizes.width(100),
-            height: ConstSizes.height(23),
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              color: MyColors.containerBackgroundColor,
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                color: MyColors.containerBackgroundColor,
+              ),
+              child: Column(
+                children: [
+                  for (int i = 0; i < MockData.clients.length; i++)
+                    ItemClientListView(clientModel: MockData.clients[i]),
+                ],
+              ),
             ),
-            child: ListView.builder(
-              itemCount: MockData.clients.length,
-              // prototypeItem: const ListTile(),
-              itemBuilder: (context, index) {
-                return ItemClientListView(clientModel: MockData.clients[index]);
-              },
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -16,51 +16,51 @@ class ItemNewsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 5),
-          // height: ConstSizes.height(26),
-          margin: EdgeInsets.only(
-            left: ConstSizes.width(4),
-            right: ConstSizes.width(4),
-            top: ConstSizes.height(3),
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            color: MyColors.containerBackgroundColor,
-          ),
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: ConstSizes.width(4),
-              vertical: ConstSizes.height(1),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, ClinicRouteNames.news,
+                arguments: newsModel);
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            // height: ConstSizes.height(26),
+            margin: EdgeInsets.only(
+              left: ConstSizes.width(4),
+              right: ConstSizes.width(4),
+              top: ConstSizes.height(3),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  newsModel.title,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: MyColors.containerTitleColor,
-                    fontWeight: FontWeight.w500,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              color: MyColors.containerBackgroundColor,
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: ConstSizes.width(4),
+                vertical: ConstSizes.height(1),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    newsModel.title,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: MyColors.containerTitleColor,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                Text(
-                  newsModel.description,
-                  maxLines: 4,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: MyColors.containerSubTitleColor,
-                    fontWeight: FontWeight.w500,
+                  Text(
+                    newsModel.description,
+                    maxLines: 4,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: MyColors.containerSubTitleColor,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, ClinicRouteNames.news,
-                        arguments: newsModel);
-                  },
-                  child: Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
@@ -77,8 +77,8 @@ class ItemNewsWidget extends StatelessWidget {
                       )
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

@@ -34,8 +34,7 @@ class MockService {
   }
 
   static late NewsModel newsModel;
-  static void newsCheck(
-      {required String title, required String subTitle}) {
+  static void newsCheck({required String title, required String subTitle}) {
     for (NewsModel element in MockData.news) {
       if (element.title == title) {
         MockService.newsModel = element;

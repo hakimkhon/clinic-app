@@ -10,7 +10,7 @@ class FreeDialogWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      child: Container(
+      child: SizedBox(
         height: ConstSizes.height(24),
         // color: MyColors.containerBackgroundColor,
         child: Column(

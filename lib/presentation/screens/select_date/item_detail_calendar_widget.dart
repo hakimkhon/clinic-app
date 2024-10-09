@@ -49,8 +49,7 @@ class ItemDetailCalendarWidget extends StatelessWidget {
                         context: context,
                         builder: (context) => index % 4 == 3
                             ? const BusyDialogWidget()
-                            : const FreeDialogWidget()
-                            ,
+                            : const FreeDialogWidget(),
                       );
                     },
                     child: Container(

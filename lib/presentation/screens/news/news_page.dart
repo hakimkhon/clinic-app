@@ -1,5 +1,6 @@
 import 'package:clinicapp/data/model/news_model.dart';
 import 'package:clinicapp/data/routes/app_route.dart';
+import 'package:clinicapp/data/service/mock_service.dart';
 import 'package:clinicapp/presentation/core/constant/colors.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
@@ -50,13 +51,17 @@ class NewsPage extends StatelessWidget {
                   left: ConstSizes.width(4),
                   right: ConstSizes.width(4),
                   top: ConstSizes.height(3),
-                  
                 ),
                 const Spacer(),
                 CustomButtonWidget(
                   title: LangAssets.chang,
                   bottomPadding: 15,
                   onTap: () {
+                    MockService.newsModel = NewsModel(
+                      title: newsModel.title,
+                      description: newsModel.description,
+                      iconUrl: newsModel.iconUrl,
+                    );
                     Navigator.pushNamed(
                       context,
                       ClinicRouteNames.newsEdit,

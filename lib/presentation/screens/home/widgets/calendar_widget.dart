@@ -36,7 +36,7 @@ class CalendarWidget extends StatelessWidget {
               onDaySelected: (selectedDay, focusedDay) {
                 //selectedDay bilan focusedDay farqi va qachon ishlatiladi
                 Navigator.pushNamed(context, ClinicRouteNames.detail,
-                    arguments: selectedDay);
+                    arguments: focusedDay);
               },
               focusedDay: DateTime.now(),
               firstDay: DateTime.now(),

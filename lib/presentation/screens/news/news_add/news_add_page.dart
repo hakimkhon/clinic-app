@@ -1,3 +1,4 @@
+import 'package:clinicapp/data/routes/app_route.dart';
 import 'package:clinicapp/presentation/core/constant/sizes.dart';
 import 'package:clinicapp/presentation/core/resource/assets.dart';
 import 'package:clinicapp/presentation/widgets/custom_button_widget.dart';
@@ -33,7 +34,7 @@ class _NewsAddPageState extends State<NewsAddPage> {
                   const HeaderIconsWidget(),
                   MyText(
                     data: LangAssets.addNews,
-                    size: 24, 
+                    size: 24,
                     fontWeight: FontWeight.w800,
                     left: ConstSizes.width(4),
                     bottom: ConstSizes.height(1),
@@ -53,7 +54,13 @@ class _NewsAddPageState extends State<NewsAddPage> {
                     child: CustomButtonWidget(
                       title: LangAssets.add,
                       bottomPadding: 15,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          ClinicRouteNames.home,
+                          (predicate) => false,
+                        );
+                      },
                     ),
                   ),
                 ],
